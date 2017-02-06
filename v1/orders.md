@@ -2,7 +2,7 @@
 
 ## הזמנות
 ### תוכן עניינים
-0. [חזור לדף הראשי](https://github.com/heimanmorad/konimbo-api-docs)
+0. [חזור לדף הראשי](https://github.com/konimboltd/api-documentation)
 1. [הקדמה](#user-content-הקדמה)
 2. [EndPoints](#user-content-endpoints)
 3. [פירוט השדות](#user-content-פירוט-השדות)

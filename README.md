@@ -69,5 +69,5 @@ X-Rate-Limit-Reset   | השעה שבה תתאפס הספירה ויהיה נית
 בעת חסימה, יוחזר מהשרת `Http Response 401 Unauthorized`
 
 ### נקודות קצה
-1. [מוצרים](https://github.com/heimanmorad/konimbo-api-docs/blob/master/v1/items.md)
-2. [הזמנות](https://github.com/heimanmorad/konimbo-api-docs/blob/master/v1/orders.md)
+1. [מוצרים](https://github.com/konimboltd/api-documentation/blob/master/v1/items.md)
+2. [הזמנות](https://github.com/konimboltd/api-documentation/blob/master/v1/orders.md)

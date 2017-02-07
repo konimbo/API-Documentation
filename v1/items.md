@@ -345,9 +345,9 @@ RESPONSE:
 
 ### מחיקת מוצר
 #### תיאור
-בעזרת שירות זה, ניתן למחוק לצמיתות.
+בעזרת שירות זה, ניתן להעביר מוצר לפח הזבל.
 
-מוצר אשר נמחק בעזרת שירות זה לא יהיה ניתן לשחזור.
+מוצר אשר נמחק בעזרת שירות זה יהיה ניתן לשחזור.
 #### EndPoint
 ```
 DELETE /{apiVersion}/items/{id/code/second_code} HTTP/1.1
@@ -368,6 +368,6 @@ Host: api.konimbo.co.il
 RESPONSE:
 {
   "status": "ok",
-  "message": "Item 1086782 has destroyed successfully"
+  "message": "Item 1086782 has deleted successfully"
 }
 ```

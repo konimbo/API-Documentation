@@ -21,9 +21,9 @@
 ### EndPoints
 * [GET /{apiVersion}/items](#user-content-מוצר)
 * [POST /{apiVersion}/items](#user-content-יצירת-מוצר)
-* [GET /{apiVersion}/item/{id/code/second_code}](#user-content-מוצרים)
-* [PUT /{apiVersion}/item/{id/code/second_code}](#user-content-עריכת-מוצר)
-* [DELETE /{apiVersion}/item/{id/code/second_code}](#user-content-מחיקת-מוצר)
+* [GET /{apiVersion}/item/{id|code|second_code}](#user-content-מוצרים)
+* [PUT /{apiVersion}/item/{id|code|second_code}](#user-content-עריכת-מוצר)
+* [DELETE /{apiVersion}/item/{id|code|second_code}](#user-content-מחיקת-מוצר)
 
 ### פירוט השדות
 #### שדות פשוטים:
@@ -114,7 +114,7 @@ free | Numeric | לא | כמות מוצרים במלאי
 
 #### EndPoint
 ```
-GET /{apiVersion}/item/{id/code/second_code}?token={yourToken}
+GET /{apiVersion}/item/{id|code|second_code}?token={yourToken}
 Host: api.konimbo.co.il
 ```
 
@@ -287,7 +287,7 @@ RESPONSE:
 בעזרת שירות זה, ניתן לעדכן מידע למוצר ספציפי.
 #### EndPoint
 ```
-PUT /{apiVersion}/items/{id/code/second_code} HTTP/1.1
+PUT /{apiVersion}/items/{id|code|second_code} HTTP/1.1
 Host: api.konimbo.co.il
 Content-Type: application/json
 
@@ -351,7 +351,7 @@ RESPONSE:
 מוצר אשר נמחק בעזרת שירות זה יהיה ניתן לשחזור.
 #### EndPoint
 ```
-DELETE /{apiVersion}/items/{id/code/second_code} HTTP/1.1
+DELETE /{apiVersion}/items/{id|code|second_code} HTTP/1.1
 Host: api.konimbo.co.il
 ```
 #### Responses

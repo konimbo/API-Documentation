@@ -39,6 +39,7 @@ second_code            | String          | כן | מקט משני (לשימוש 
 desc                   | String          | כן | תיאור קצר על המוצר | `טלפון מתקדם מיצרן בינלאומי, מספר אחד בתחום הטלפונים`
 visible                | Boolean         | כן | האם המוצר מופיע בחנות או מוסתר | `true`, `false`
 model_title            | String          | כן | שם הספק | `MyProvider`
+brand                  | String          | כן | שם היצרן | `Manufacturer`, `יצרן`
 created_at             | Time (ISO-8601) | לא | זמן יצירת המוצר | `2016-01-01T09:00:00Z`
 updated_at             | Time (ISO-8601) | לא | זמן העדכון האחרון של המוצר | `2017-01-01T09:00:00Z`
 related_items          | Array           | כן | רשימת הids של המוצרים הנלווים | `[1253456, 654879]`

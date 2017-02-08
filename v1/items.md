@@ -53,24 +53,58 @@ related_items          | Array           | כן | רשימת הids של המוצ
 ##### תמונות:
 שדה זה ניתן לעדכון.
 
+לכל מוצר יש תמונות, בכל קריאה ניתן להעלות עד 5 תמונות
+
 שם השדה | סכמה | חובה | הסבר
 :---|:---|---:|---:
 id | Integer | לא | מספר התמונה במערכת קונימבו, יש לספק את מספר התמונה רק אם ברצונך לערוך אותה
 url | String | לא | הUrl של התמונה שברצונך להעלות<br>פורמטים מורשים: doc, docx ,xml ,jpeg ,gif ,png ,bmp ,pdf
 alt | String | לא | הטקסט החלופי של התמונה
 position | String | לא | מיקום התמונה ביחס לשאר התמונות
-דוגמא:
+דוגמאות:
+
+* יצירת תמונה חדשה
 ```JSON
 "images": [{
-  "id": "3215468",
-  "url": "http://domain.com/images/myImage.jpg",
-  "alt": "תיאור התמונה",
-  "position": "1"
+    "url": "http://domain.com/images/myImage.jpg",
+    "alt": "תיאור התמונה",
+    "position": "1"
+}]
+```
+* עריכת תמונה קיימת
+```JSON
+"images": [{
+    "id": "3215468",
+    "url": "http://domain.com/images/myImage.jpg",
+    "alt": "תיאור התמונה",
+    "position": "1"
+}]
+```
+* מחיקת תמונה
+```JSON
+"images": [{
+    "id": "3215468",
+    "delete": "true"
+}]
+```
+* מחיקת כל התמונות
+```JSON
+"images": [{
+    "delete": "true"
+}]
+```
+* מחיקת כל התמונות ויצירת חדשות
+```JSON
+"images": [{
+    "delete": "true"
 }, {
-  "id": "3215469",
-  "url": "http://domain.com/images/myImage2.jpg",
-  "alt": "תיאור התמונה",
-  "position": "2"
+    "url": "http://domain.com/images/myImage1.jpg",
+    "alt": "תיאור התמונה",
+    "position": "1"
+}, {
+    "url": "http://domain.com/images/myImage2.jpg",
+    "alt": "תיאור התמונה",
+    "position": "2"
 }]
 ```
 
@@ -93,7 +127,7 @@ delete | Boolan | כן | כדי למחוק את כל המפרט, יש לשלוח
 
 דוגמאות:
 
-1. יצירת שורה חדשה
+* יצירת שורה חדשה
 ```JSON
 "spec": [{
     "group": "Physical",
@@ -102,7 +136,7 @@ delete | Boolan | כן | כדי למחוק את כל המפרט, יש לשלוח
     "position": "9"
 }]
 ```
-2. עריכת שורה קיימת
+* עריכת שורה קיימת
 ```JSON
 "spec": [{
     "id": "3215468",
@@ -112,20 +146,20 @@ delete | Boolan | כן | כדי למחוק את כל המפרט, יש לשלוח
     "position": "10",
 }]
 ```
-3. מחיקת שורה קיימת
+* מחיקת שורה קיימת
 ```JSON
 "spec": [{
     "id": "3215469",
     "delete": "true"
 }]
 ```
-4. מחיקת כל המפרט
+* מחיקת כל המפרט
 ```JSON
 "spec": [{
     "delete": "true"
 }]
 ```
-5. מחיקת כל המפרט ויצירת חדש
+* מחיקת כל המפרט ויצירת חדש
 ```JSON
 "spec": [{
     "delete": "true"

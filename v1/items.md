@@ -24,9 +24,9 @@
 ### EndPoints
 * [GET /{apiVersion}/items](#user-content-מוצר)
 * [POST /{apiVersion}/items](#user-content-יצירת-מוצר)
-* [GET /{apiVersion}/item/{id|code|second_code}](#user-content-מוצרים)
-* [PUT /{apiVersion}/item/{id|code|second_code}](#user-content-עריכת-מוצר)
-* [DELETE /{apiVersion}/item/{id|code|second_code}](#user-content-מחיקת-מוצר)
+* [GET /{apiVersion}/items/{id|code|second_code}](#user-content-מוצרים)
+* [PUT /{apiVersion}/items/{id|code|second_code}](#user-content-עריכת-מוצר)
+* [DELETE /{apiVersion}/items/{id|code|second_code}](#user-content-מחיקת-מוצר)
 
 ### פירוט השדות
 #### שדות פשוטים:
@@ -220,7 +220,7 @@ free | Numeric | לא | כמות מוצרים במלאי
 
 #### EndPoint
 ```
-GET /{apiVersion}/item/{id|code|second_code}?token={yourToken}
+GET /{apiVersion}/items/{id|code|second_code}?token={yourToken}
 Host: api.konimbo.co.il
 ```
 

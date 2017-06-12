@@ -6,7 +6,7 @@
 1. [הקדמה](#user-content-הקדמה)
 2. [EndPoints](#user-content-endpoints)
 3. [פירוט השדות](#user-content-פירוט-השדות)
-4. [מוצר](#user-content-מוצר)
+4. [אמזון](#user-content-אמזון)
 5. [מוצרים](#user-content-מוצרים)
 6. [יצירת מוצר](#user-content-יצירת-מוצר)
 7. [עריכת מוצר](#user-content-עריכת-מוצר)

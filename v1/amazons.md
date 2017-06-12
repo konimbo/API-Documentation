@@ -7,10 +7,6 @@
 2. [EndPoints](#user-content-endpoints)
 3. [פירוט השדות](#user-content-פירוט-השדות)
 4. [אמזון](#user-content-אמזון)
-5. [מוצרים](#user-content-מוצרים)
-6. [יצירת מוצר](#user-content-יצירת-מוצר)
-7. [עריכת מוצר](#user-content-עריכת-מוצר)
-8. [מחיקת מוצר](#user-content-מחיקת-מוצר)
 
 ### הקדמה
 בעזרת נקודת קצה זו ניתן לקרוא קבצים מ - Amazon s3

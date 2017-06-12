@@ -5,31 +5,12 @@
 0. [חזור לדף הראשי](https://github.com/heimanmorad/konimbo-api-docs)
 1. [הקדמה](#user-content-הקדמה)
 2. [EndPoints](#user-content-endpoints)
-3. [פירוט השדות](#user-content-פירוט-השדות)
-4. [אמזון](#user-content-אמזון)
+3. [אמזון](#user-content-אמזון)
 
 ### הקדמה
 בעזרת נקודת קצה זו ניתן לקרוא קבצים מ - Amazon s3
 ### EndPoints
 * [POST /{apiVersion}/amazons](#user-content-קריאת-קובץ)
-
-### פירוט השדות
-#### שדות פשוטים:
-שם השדה | סכמה | ניתן לעדכון | הסבר | דוגמא
-:--|:---|---:|---:|---:
-id                     | Integer         | לא | מספר המוצר במערכת קונימבו | `1203546`
-title                  | String          | כן | כותרת המוצר | `טלפון סלולארי`
-store_category_title   | String          | כן | הקטגוריה שאליה המוצר שייך | `טלפונים`
-price                  | Numeric         | כן | מחיר המוצר | `55.50`, `999`
-origin_price           | Numeric         | כן | מחיר מקורי (לפני מבצע) | `1499`, `1999.99`
-code                   | String          | כן | מק"ט המוצר | `SKU#123`, `49841687468`
-second_code            | String          | כן | מקט משני (לשימוש פנימי) | `6418351816`
-desc                   | String          | כן | תיאור קצר על המוצר | `טלפון מתקדם מיצרן בינלאומי, מספר אחד בתחום הטלפונים`
-visible                | Boolean         | כן | האם המוצר מופיע בחנות או מוסתר | `true`, `false`
-model_title            | String          | כן | שם הספק | `MyProvider`
-created_at             | Time (ISO-8601) | לא | זמן יצירת המוצר | `2016-01-01T09:00:00Z`
-updated_at             | Time (ISO-8601) | לא | זמן העדכון האחרון של המוצר | `2017-01-01T09:00:00Z`
-related_items          | Array           | כן | רשימת הids של המוצרים הנלווים | `[1253456, 654879]`
 
 ### אמזון
 #### תיאור

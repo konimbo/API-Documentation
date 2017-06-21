@@ -181,7 +181,7 @@ group_title | String | כן | שם הקבוצה
 group_value_title | String | כן | שם ערך הקבוצה
 group_position | String | כן | מיקום הקבוצה
 group_value_position | Integer | כן | מיקום ערך הקבוצה
-remove_from_item | Boolan | לא | כדי למחוק את כל המפרט, יש לשלוח רק את שדה 
+remove_from_item | Boolan | לא | כדי למחוק שיוך של סינון למוצר יש לשלוח שדה זה עם הערך true 
 
 דוגמאות:
 

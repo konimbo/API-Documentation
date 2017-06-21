@@ -181,6 +181,7 @@ group_title | String | כן | שם הקבוצה
 group_value_title | String | כן | שם ערך הקבוצה
 group_position | String | כן | מיקום הקבוצה
 group_value_position | Integer | כן | מיקום ערך הקבוצה
+broad | Boolan | לא | במידה ורוצים ליצור סינון רוחבי יש לשלוח את הערך   true 
 remove_from_item | Boolan | לא | כדי למחוק שיוך של סינון למוצר יש לשלוח שדה זה עם הערך true 
 
 דוגמאות:

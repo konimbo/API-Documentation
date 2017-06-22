@@ -1,19 +1,29 @@
 
-# Konimbo API Docs
+# Konimbo Integration Doc
 ## מוצרים
 ### תוכן עניינים
 0. [חזור לדף הראשי](https://github.com/heimanmorad/konimbo-api-docs)
 1. [הקדמה](#user-content-הקדמה)
-2. [EndPoints](#user-content-endpoints)
-3. [אמזון](#user-content-אמזון)
+2. [Getting Started](#user-content-getting-started)
+3. [Integration](#user-content-Integration)
 
 ### הקדמה
-בעזרת נקודת קצה זו ניתן לקרוא קבצים מ - Amazon s3
-### EndPoints
-* [POST /{apiVersion}/amazons](#user-content-קריאת-קובץ)
+The integration system will allow us to right simple integrations with 3rd party system without needed a server-side developer (hopefully)
+The integration itself is written in the Admin-control-panel as described below.
+For example - an integration that will load items from a 3rd party system into Konimbo. that sort of integration can be written in the integration system.
 
-### אמזון
-#### תיאור
+### Getting Started
+In order to start developing an intergration, we need to enable some settings in the store.
+1. On הגדרות מתקדמות לחנות, enable the "Api" and "אינטגרציות" checkboxes.
+2. An Api user is needed. in order to create one, go to "משתמשי API" under "משתמשים - אדמין"
+   choose a name of the user, make it "Active" (checkbox "פעיל"), and update the "הגבלת קריאות" and "הגבלת רשומות" for the
+   maxmimum possible (so u wont get blocked for multiple requests)
+   Add the users permissions according to the wanted ENDPOINTS this user needs to be permitted to.
+3. Under "קונימבו - אדמין" a new link will be avialble - "אינטגרציות",
+   Create a new integration, make it active (checkbox "פעיל"),
+   Choose a name for the integration and save it
+   
+### Integration
 בעזרת השירות הזה, ניתן להחזיר מידע של קובץ XML או JSON
 את המידע ניתן להחזיר בפורמט XML או JSON, השליטה על כך מתבצעת דרך משתמש ה API
 #### EndPoint

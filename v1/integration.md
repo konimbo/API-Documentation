@@ -3,14 +3,14 @@
 ## מוצרים
 ### תוכן עניינים
 0. [חזור לדף הראשי](https://github.com/heimanmorad/konimbo-api-docs)
-1. [הקדמה](#user-content-הקדמה)
+1. [Background](#user-content-הקדמה)
 2. [Getting Started](#user-content-getting-started)
 3. [Integration](#user-content-Integration)
 
-### הקדמה
-The integration system will allow us to right simple integrations with 3rd party system without needed a server-side developer (hopefully)
+### Background
+The integration system will allow us to wright simple integrations with third party system without needing a server-side developer (hopefully)
 The integration itself is written in the Admin-control-panel as described below.
-For example - an integration that will load items from a 3rd party system into Konimbo. that sort of integration can be written in the integration system.
+For example - an integration that will load items from a third party system into Konimbo. that sort of integration can be written in the integration system.
 
 ### Getting Started
 In order to start developing an intergration, we need to enable some settings in the store.
@@ -24,8 +24,12 @@ In order to start developing an intergration, we need to enable some settings in
    Choose a name for the integration and save it
    
 ### Integration
-בעזרת השירות הזה, ניתן להחזיר מידע של קובץ XML או JSON
-את המידע ניתן להחזיר בפורמט XML או JSON, השליטה על כך מתבצעת דרך משתמש ה API
+Each integration is built from 2 sections:
+* Initial Script
+* Actions
+
+
+
 #### EndPoint
 ```
 POST /{apiVersion}/amazons/

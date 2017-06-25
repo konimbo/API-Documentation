@@ -38,35 +38,46 @@ For example: an integration that is ment to load items into konimbo system. the 
 
 The script itself is built from 5 different functions that MUST be written if we dont use them:
 
+* data
 ```
-function data(response, vars, current_obj) {
-    var username = vars["priority_user_name"];
-    var password = vars["priority_password"];
-
-    var items_to_send = [];
-    current_obj["items"].forEach(function(entry) {
-        items_to_send.push({
-            "PARTNAME": entry["code"],
-            "QUANT": entry["quantity"],
-            "TOTPRICE": parseFloat(entry["price"]),
-            // "DUEDATE":  "2017-06-06"
-        });
-    });
-
-    return {
-        "LOADCODE": "001",
-        "CUSTDES": current_obj["name"],
-        "FULL_ADDRESS": current_obj["address"],
-        "PHONE1": current_obj["phone"],
-        "EMAIL": current_obj["email"],
-        "ID": current_obj["id"],
-        "DOCDATE": current_obj["created_at"],
-        "PRIT_DOCLINE_SUBFORM": items_to_send,
-        "PAYMENTNUM": current_obj["payments"]["number_of_payments"],
-        "QPRICE": parseFloat(current_obj["total_price"])
-    }
+function data(request, vars) {
+ return {
+   "order_id": request["params"]["order"]["id"]
+ };
 }
 ```
+this function must return a JSON object.
+it is used to define a data object that saves whatever data we want, to use later in the rest of the script.
+in the example above we return a JSON object that contains a key name "order_id" that contains request["params"]["order"]["id"] value in it.
+(this request data comes from a WEBHOOK but we will explain what that is later)
+
+* request
+```
+function request(data, vars) {
+ return {
+   "url": "https://api.konimbo.co.il/v1/orders/" + data[0]["order_id"] + "?token=" + vars["konimbo_api_token"] ,
+   "method": "get",
+   "body": {},
+   "headers": {}
+ }
+}
+```
+This function MUST return a JSON object with the following keys: url, method, body, headers:
+* url = String - the url that to make the HTTP request to.
+* method = String - the HTTP method the request should be (GET/POST/PUT)
+* body = JSON - a JSON object the represents the body of the request we want to send.
+* headers = JSON - a JSON object the represents the headers of the request we want to send.
+
+* filter
+```
+function filter(data, vars) {
+ return true;
+}
+```
+this function must return TRUE or FALSE.
+it is used to decide wheter or not we want to continue the integration, based on the response we got from the previous function's HTTP request.
+for example: if the request was to get an order from Konimbo, and we want the integration to work only on orders that has  GETT shipping type, we will write on condition in the filter function that checks wheter or not the order has that shipping or not. if it wont - the filter function will return false, and the integration will stop running.
+
 
 #### Actions
 

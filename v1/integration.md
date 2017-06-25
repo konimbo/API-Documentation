@@ -25,17 +25,51 @@ In order to start developing an intergration, we need to enable some settings in
    Choose a name for the integration and save it
    
 ### Integration
-Each integration is built from 2 sections:
+Each integration is built from 3 sections:
+* Config
 * Initial Script
 * Actions
 
+#### Config
 
+#### Initial Script
+The first script section is usually used to make an initial HTTP request, that the entire integration will be work based on the request's response.
+For example: an integration that is ment to load items into konimbo system. the first script will include the HTTP  request to get the array items to load, and the rest of the integration will work on that array to actually load it.
 
-#### EndPoint
+The script itself is built from 5 different functions that MUST be written if we dont use them:
+
 ```
-POST /{apiVersion}/amazons/
-Host: api.konimbo.co.il
+function data(response, vars, current_obj) {
+    var username = vars["priority_user_name"];
+    var password = vars["priority_password"];
+
+    var items_to_send = [];
+    current_obj["items"].forEach(function(entry) {
+        items_to_send.push({
+            "PARTNAME": entry["code"],
+            "QUANT": entry["quantity"],
+            "TOTPRICE": parseFloat(entry["price"]),
+            // "DUEDATE":  "2017-06-06"
+        });
+    });
+
+    return {
+        "LOADCODE": "001",
+        "CUSTDES": current_obj["name"],
+        "FULL_ADDRESS": current_obj["address"],
+        "PHONE1": current_obj["phone"],
+        "EMAIL": current_obj["email"],
+        "ID": current_obj["id"],
+        "DOCDATE": current_obj["created_at"],
+        "PRIT_DOCLINE_SUBFORM": items_to_send,
+        "PAYMENTNUM": current_obj["payments"]["number_of_payments"],
+        "QPRICE": parseFloat(current_obj["total_price"])
+    }
+}
 ```
+
+#### Actions
+
 
 #### Parameters
 הפרמטרים הנדרשים הם פרטי התחברות ל amazon s3 ואת ה konimbo api token

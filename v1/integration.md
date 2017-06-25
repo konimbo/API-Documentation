@@ -13,7 +13,8 @@ The integration itself is written in the Admin-control-panel as described below.
 For example - an integration that will load items from a third party system into Konimbo. that sort of integration can be written in the integration system.
 
 ### Getting Started
-In order to start developing an intergration, we need to enable some settings in the store.
+In order to start developing an intergration, we need to enable some settings in the store:
+
 1. On הגדרות מתקדמות לחנות, enable the "Api" and "אינטגרציות" checkboxes.
 2. An Api user is needed. in order to create one, go to "משתמשי API" under "משתמשים - אדמין"
    choose a name of the user, make it "Active" (checkbox "פעיל"), and update the "הגבלת קריאות" and "הגבלת רשומות" for the

@@ -45,7 +45,6 @@ model_title            | String          | כן | שם הספק | `MyProvider`
 brand                  | String          | כן | שם היצרן | `Manufacturer`, `יצרן`
 created_at             | Time (ISO-8601) | לא | זמן יצירת המוצר | `2016-01-01T09:00:00Z`
 updated_at             | Time (ISO-8601) | לא | זמן העדכון האחרון של המוצר | `2017-01-01T09:00:00Z`
-related_items          | Array           | כן | רשימת הids של המוצרים הנלווים | `[1253456, 654879]`
 position               | Integer         | כן | מיקום המוצר | `123`
 warranty               | String          | כן | אחריות | `5 שנים`
 #### שדות מיוחדים:
@@ -68,6 +67,7 @@ warranty               | String          | כן | אחריות | `5 שנים`
 url | String | לא | הUrl של התמונה שברצונך להעלות<br>פורמטים מורשים: doc, docx ,xml ,jpeg ,gif ,png ,bmp ,pdf
 alt | String | לא | הטקסט החלופי של התמונה
 position | String | לא | מיקום התמונה ביחס לשאר התמונות
+
 דוגמאות:
 
 * יצירת תמונה חדשה
@@ -116,8 +116,7 @@ position | String | לא | מיקום התמונה ביחס לשאר התמונ�
 שם השדה | סכמה | חובה | הסבר
 :---|:---|---:|---:
 friend_item_id | String | כן | מזהה מוצר 
-position | String | לא | מיקום המוצר 
-
+position | String | לא | מיקום המוצר
 
 דוגמאות:
 

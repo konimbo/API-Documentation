@@ -6,6 +6,7 @@
 1. [Background](#user-content-הקדמה)
 2. [Getting Started](#user-content-getting-started)
 3. [Integration](#user-content-Integration)
+4. [Trigger](#user-content-Trigger)
 
 ### Background
 The integration system will allow us to wright simple integrations with third party system without needing a server-side developer (hopefully)
@@ -31,6 +32,27 @@ Each integration is built from 3 sections:
 * Actions
 
 #### Config
+In this section we define the integration's variables.
+Format: Array of JSONs. each JSON represents a single variable.
+
+```
+[{
+ "type": "password",
+ "label": "Konimbo API Token",
+ "key": "konimbo_api_token",
+ "class": "ltr"
+}, {
+ "type": "password",
+ "label": "username",
+ "key": "username",
+ "class": "ltr"
+}
+```
+each varaible's JSON needs to contain the following keys:
+* "type" - "password" will cause the data be "encrypted" with * to encrypt sensitive data.
+* "label" - thats the title of the field that will be seen at the Trigger creation/edit page in the Admin control panel
+* "key" - the name of the field. we can reach the data by using this name we set here (example: vars["konimbo_api_token"]
+* "class" - irrelevnt, always initialize with "ltr"
 
 #### Initial Script
 The first script section is usually used to make an initial HTTP request, that the entire integration will be work based on the request's response.
@@ -75,50 +97,155 @@ function filter(data, vars) {
 }
 ```
 this function must return TRUE or FALSE.
+
 it is used to decide wheter or not we want to continue the integration, based on the response we got from the previous function's HTTP request.
+
 for example: if the request was to get an order from Konimbo, and we want the integration to work only on orders that has  GETT shipping type, we will write on condition in the filter function that checks wheter or not the order has that shipping or not. if it wont - the filter function will return false, and the integration will stop running.
 
 
-#### Actions
-
-
-#### Parameters
-הפרמטרים הנדרשים הם פרטי התחברות ל amazon s3 ואת ה konimbo api token
-1. token = "konimbo_api_token"
-2. Amazon file name - שם הקובץ לקיריאה
-3. Amazon bucket name - שם הבאקט שבו נמצא הקובץ
-4. Amazon region - הריג'ן שבו הבאקט נמצא
-5. Amazon file format - פורמט הקובץ - XML / JSON
-6. Access key id - amazon access key 
-7. Secret access key - amazon secret access key
-8. trigger id - מזהה הטריגר במערכת קונימבו - אופציונאלי
-
-
-#### Responses
-* 200 - The requested file's content
-* 401 - Unauthorized
-* 404 - No results found
-* 500 - Internal error
-
-#### דוגמאות
-הקריאה הבאה תחזיר את תוכן הקובץ (XML\JSON)
-פורמט קבלת הקובץ ניתן לשליטה ע"י עריכת משתמש ה API.
+* array
 
 ```
-POST /{apiVersion}/amazons HTTP/1.1
-Host: api.konimbo.co.il
-Content-Type: application/json
+function array(response, vars) {
+ return response["body"]["items"]["item"];
+}
+```
+This function needs to return the object (or array of objects) we want the integration to be executed on.
 
-{
-  "token": "{yourToken}",
-  "amazon": {
-    "region": "value",
-    "access_key_id": "value",
-    "secret_access_key": "value",
-    "bucket_name": "value",
-    "file_name": "value",
-    "file_format": "value"
-  }
+For example: if we want to load items into Konimbo system, the inital script will make an HTTP request to a third party system that will return a response containing the items, and in this function we will return the actual items array out of the response as seen in the example above.
+
+* hasAnotherPage
+
+need to complete
+
+```
+function hasAnotherPage(response, vars) {
+ // there is no use with this function at this integration
+ return false;
 }
 ```
 
+#### Actions
+The actions are the "logic" behind the integration.
+
+each action is built from a script.
+
+the goal of the actions is to do manipulations on the data we recieved from the first script,
+and write it to a third party system (or our own system)
+
+Similar to the first script, each action's MUST contain 3 functions:
+
+* data - define the data object
+
+```
+function data(response, vars, current_obj) {
+
+    var dummy_var = "Hello World";
+    
+    return {
+        "store_category_title": current_obj["store_category_title"],
+        "spec": current_obj["spec"],
+        "title": current_obj["title"],
+        "filter": current_obj["filter"],
+        "code": current_obj["code"],
+        "price": current_obj["price"],
+        "desc": current_obj["desc"],
+        "images": current_obj["images"],
+        "visible": current_obj["visible"],
+        "quantity": current_obj["quantity"],
+        "related_items": current_obj["related_items"]
+    }
+}
+```
+This function used to define a data object that saves whatever data we want, to use later in the rest of the script.
+
+the data function MUST return a json object. (an empty object is acceptable)
+
+The data functions recieves 3 parameters: response, vars, current_obj
+
+vars = contains the integration's variables - things like usernames and passwords
+current_obj = contains the object we want the "work" on in this Action. (wheter it is part of an array of objects or not)
+
+For example: If the integration's goal is to read an item from another system and write it to Konimbo, we need to make sure that current_obj will contain the data of the wanted order.
+
+
+the returned object can later be access as follows:
+data[ACTION_NUMBER]["FIELD_NAME"]
+ACTION_NUMBER = represented the position of the Action. if we are at the first Action the position will be 1, and so on.
+
+```
+data[1]["images"]
+```
+
+you can write Javascript code to make manipulations on the data (Loops, conversions, etc.)
+
+
+* filter -  based on what we know, do we want to continue the integration?
+
+```
+function filter(data, vars) {
+    return data[1]["price"] > 0;
+}
+
+```
+
+The filter function is ment to decide wether or not we want to stop, based on the data object.
+
+the function MUST return true or false
+
+
+* request - make an HTTP request to whoever you want.
+
+```
+function request(data, vars) {
+    return {
+        "url": "http://localhost:3002/v1/items/",
+        "method": "post",
+        "internal_data": {
+            "log_type": "items"
+        },
+        "body": {
+            "token": vars["konimbo_api_token"],
+            "item": {
+                "title": data[1]["title"],
+                "store_category_title": data[1]["store_category_title"],
+                "spec": data[1]["spec"],
+                "filters": data[1]["filter"],
+                "code": data[1]["code"],
+                "price": data[1]["price"],
+                "desc": data[1]["desc"],
+                "images": data[1]["images"],
+                "visible": data[1]["visible"],
+                "quantity": data[1]["quantity"],
+                "related_items": data[1]["related_items"]
+            }
+        }
+    }
+  }
+```
+
+The request function is ment to make an HTTP request to an API.
+
+This function MUST return a JSON object with the following keys: url, method, body, headers:
+* url = String - the url that to make the HTTP request to.
+* method = String - the HTTP method the request should be (GET/POST/PUT)
+* body = JSON - a JSON object the represents the body of the request we want to send.
+* headers = JSON - a JSON object the represents the headers of the request we want to send.
+
+in order to put together the HTTP request we can use the data object and the vars object.
+
+
+### Trigger
+
+create a trigger:
+1. press "טריגרים" link under "קונימבו - אדמין" in the Admin control panel
+2. choose the integration to which we want to create a trigger for (will show only existing integrations within the store0
+3. create the trigger
+4. Make the trigger active (checkbox "פעיל")
+5. Incase we dont want an extra layer of security - remove the checkbox "שכבת אבטחה נוספת".
+6. under "הגבלת פעילות" increate to maximum value - so you want get blocked while testing your integrations
+7. The integration variables we created in the Config part will be presented at the bottom of the page, and we can set data    in them.
+ 
+ after creating the Trigger, we will get unique url for it.
+ in order to activate the integration we need to make an GET HTTP request to that url (you can use Postman to do so)
+ 

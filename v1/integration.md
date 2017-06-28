@@ -265,8 +265,8 @@ create a trigger:
  2. item_inventory_updateditem's inventory update
  
  A webhook is built from:
- * callback_url - the url we want the webhook to activate in case the webhook event occured.
- * event - the event on which the webhook is activated.
+ 1. callback_url - the url we want the webhook to activate in case the webhook event occured.
+ 2. event - the event on which the webhook is activated.
  
  * Creating a webhook
  ```

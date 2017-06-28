@@ -5,8 +5,10 @@
 0. [חזור לדף הראשי](https://github.com/heimanmorad/konimbo-api-docs)
 1. [Background](#user-content-הקדמה)
 2. [Getting Started](#user-content-getting-started)
-3. [Integration](#user-content-Integration)
-4. [Trigger](#user-content-Trigger)
+3. [Integration](#user-content-integration)
+4. [Trigger](#user-content-trigger)
+4. [Webhook](#user-content-webhook)
+
 
 ### Background
 The integration system will allow us to write simple integrations with third party systems - without needing a server-side developer.

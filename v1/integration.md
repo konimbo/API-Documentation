@@ -9,9 +9,10 @@
 4. [Trigger](#user-content-Trigger)
 
 ### Background
-The integration system will allow us to wright simple integrations with third party system without needing a server-side developer (hopefully)
+The integration system will allow us to write simple integrations with third party systems - without needing a server-side developer.
+
 The integration itself is written in the Admin-control-panel as described below.
-For example - an integration that will load items from a third party system into Konimbo. that sort of integration can be written in the integration system.
+For example: - an integration that will load items from a third party system into Konimbo. that sort of integration can be written in the integration system.
 
 ### Getting Started
 In order to start developing an intergration, we need to enable some settings in the store:
@@ -33,6 +34,8 @@ Each integration is built from 3 sections:
 
 #### Config
 In this section we define the integration's variables.
+this variables are initialized in the Trigger, and can be used throughout the intire Integration.
+
 Format: Array of JSONs. each JSON represents a single variable.
 
 ```
@@ -55,7 +58,7 @@ each varaible's JSON needs to contain the following keys:
 * "class" - irrelevnt, always initialize with "ltr"
 
 #### Initial Script
-The first script section is usually used to make an initial HTTP request, that the entire integration will be work based on the request's response.
+The first script section is usually used to make an initial HTTP request, that the entire integration will work based on the request's response.
 For example: an integration that is ment to load items into konimbo system. the first script will include the HTTP  request to get the array items to load, and the rest of the integration will work on that array to actually load it.
 
 The script itself is built from 5 different functions that MUST be written if we dont use them:
@@ -69,8 +72,9 @@ function data(request, vars) {
 }
 ```
 this function must return a JSON object.
-it is used to define a data object that saves whatever data we want, to use later in the rest of the script.
-in the example above we return a JSON object that contains a key name "order_id" that contains request["params"]["order"]["id"] value in it.
+it is used to define a data object that saves whatever data we want, to use later in the rest of the script (and integration)
+
+in the example above we return a JSON object that contains a key named "order_id" that contains request["params"]["order"]["id"] value in it.
 (this request data comes from a WEBHOOK but we will explain what that is later)
 
 * request
@@ -199,7 +203,7 @@ the function MUST return true or false
 ```
 function request(data, vars) {
     return {
-        "url": "http://localhost:3002/v1/items/",
+        "url": "https://api.konimbo.co.il/v1/items/",
         "method": "post",
         "internal_data": {
             "log_type": "items"
@@ -249,3 +253,96 @@ create a trigger:
  after creating the Trigger, we will get unique url for it.
  in order to activate the integration we need to make an GET HTTP request to that url (you can use Postman to do so)
  
+ 
+ # Webhooks
+ 
+ A Webhook is a way to let other system know that a specific event happend in Konimbo automatically.
+ 
+ we have 2 events:
+ 1. order_created
+ 2. item_inventory_updateditem's inventory update
+ 
+ A webhook is built from:
+ * callback_url - the url we want the webhook to activate in case the webhook event occured.
+ * event - the event on which the webhook is activated.
+ 
+ * Creating a webhook
+ ```
+POST /{apiVersion}/webhooks HTTP/1.1
+Host: api.konimbo.co.il
+Content-Type: application/json
+
+{
+	"token": "{yourToken}",
+	"webhook": {
+		"callback_url": "{the url the webhook will make an HTTP POST request to}",
+		"event": "order_created"
+	}
+}
+
+```
+Example:
+ 
+Lets say we want to send each konimbo order that is created (in a specific store)
+to a third party system.
+these are the steps to do so:
+
+1. Create a webhook and set the callback_url to the wanted Trigger's URL (that will activate a specific integration eventually)
+ 
+```
+POST https://api.konimbo.co.il/v1/webhooks
+
+{
+	"token": "1231123",
+	"webhook": {
+		"callback_url": "https://api.konimbo.co.il/hooks/OTU2MSDTlfMTQ5NzI2NDcwNQ",
+		"event": "order_created"
+	}
+}
+
+```
+
+2. After an order will be created, the webhook will make an HTTP POST request to the trigger's url,
+sending the order id of the order that was just created.
+
+3. In the integration itself, we can get this order id in the following method:
+   In the Initial Script section, on the data function:
+   
+   ```
+   function data(request, vars) {
+     return {
+      "order_id": request["params"]["order"]["id"]
+     };
+   }
+
+   ```
+ 4. We can use this order id to fetch the order's detail and then send it to wherever we want.
+ 5. see the complete example in digitalilelad store in the priority_orders integration
+ 
+ * Updating a webhook
+ ```
+PUT /{apiVersion}/webhooks/{webhook_id} HTTP/1.1
+Host: api.konimbo.co.il
+Content-Type: application/json
+
+{
+	"token": "{yourToken}",
+	"webhook": {
+		"callback_url": "https://api.konimbo.co.il/hooks/Mzk5MDlfMTQ5NTk1ODY5OQ",
+		"event": "order_created"
+	}
+}
+
+```
+
+ * Get a single webhook
+ ```
+GET /{apiVersion}/webhooks/{webhook_id}?token={yourToken} HTTP/1.1
+Host: api.konimbo.co.il
+```
+
+ * Get all of the store's webhooks
+ ```
+GET /{apiVersion}/webhooks/?token={yourToken} HTTP/1.1
+Host: api.konimbo.co.il
+```

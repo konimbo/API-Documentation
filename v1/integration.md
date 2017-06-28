@@ -28,7 +28,7 @@ In order to start developing an intergration, we need to enable some settings in
    Create a new integration, make it active (checkbox "פעיל"),
    Choose a name for the integration and save it
    
-### Integration
+# Integration
 Each integration is built from 3 sections:
 * Config
 * Initial Script
@@ -131,7 +131,7 @@ function hasAnotherPage(response, vars) {
 }
 ```
 
-#### Actions
+# Actions
 The actions are the "logic" behind the integration.
 
 each action is built from a script.
@@ -241,7 +241,7 @@ This function MUST return a JSON object with the following keys: url, method, bo
 in order to put together the HTTP request we can use the data object and the vars object.
 
 
-### Trigger
+# Trigger
 
 create a trigger:
 1. press "טריגרים" link under "קונימבו - אדמין" in the Admin control panel

@@ -256,7 +256,7 @@ create a trigger:
  in order to activate the integration we need to make an GET HTTP request to that url (you can use Postman to do so)
  
  
- # Webhooks
+ # Webhook
  
  A Webhook is a way to let other system know that a specific event happend in Konimbo automatically.
  

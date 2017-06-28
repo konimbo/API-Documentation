@@ -8,6 +8,7 @@
 3. [Integration](#user-content-integration)
 4. [Trigger](#user-content-trigger)
 4. [Webhook](#user-content-webhook)
+5. [Special integration varaibles](#user-content-special-integration-variables)
 
 
 ### Background
@@ -58,6 +59,46 @@ each varaible's JSON needs to contain the following keys:
 * "label" - thats the title of the field that will be seen at the Trigger creation/edit page in the Admin control panel
 * "key" - the name of the field. we can reach the data by using this name we set here (example: vars["konimbo_api_token"]
 * "class" - irrelevnt, always initialize with "ltr"
+
+##### Special integration varaibles
+
+there are a few special integration variables that you can add to your integration.
+1. Trigger ID - used mainly for /amazons ENDPOINT. Initalize this field with the trigger's id and konimbox will automatically fetch the integrations variables behind the scenes. notice the exact key name you need to set:
+
+```
+[{
+ "type": "...",
+ "label": "...",
+ "key": "...",
+ "class": "..."
+}, {
+ "type": "password",
+ "label": "Trigger ID",
+ "key": "trigger_id",
+ "class": "ltr"
+},
+```
+2. Log emails - emails (seperated with , (comma)) that will get the integration's log file (incase we have set the integration to create one)
+
+3. Log file format - the format we want the output of the log file to be presented in. (XML/JSON)
+
+notice the exact key names of these variables:
+
+```
+...
+, {
+ "type": "password",
+ "label": "log_emails (להפריד עם פסיקים):",
+ "key": "log_emails",
+ "class": "ltr"
+}, {
+ "type": "password",
+ "label": "log file format (XML/JSON):",
+ "key": "log_file_format",
+ "class": "ltr"
+}]
+```
+
 
 #### Initial Script
 The first script section is usually used to make an initial HTTP request, that the entire integration will work based on the request's response.
@@ -208,7 +249,12 @@ function request(data, vars) {
         "url": "https://api.konimbo.co.il/v1/items/",
         "method": "post",
         "internal_data": {
-            "log_type": "items"
+            "log_type": "items",
+	         "authentication": {
+			  "authentication_type": "basic_auth", 
+			  "username": vars["priority_user_name"],
+			  "password": vars["priority_password"],
+   		  }
         },
         "body": {
             "token": vars["konimbo_api_token"],
@@ -234,6 +280,11 @@ The request function is ment to make an HTTP request to an API.
 
 This function MUST return a JSON object with the following keys: url, method, body, headers:
 * url = String - the url that to make the HTTP request to.
+* internal_data = String - a JSON of data for internal use. NOTICE: the internal_data can only be used in the Actions scripts (and not in the Initial script).
+there are 2 available keys currently supported:
+1. "log_type": "items" - set the log type we want the integration to output. right only "items" is supported. 
+2. "authentication": used to set an authentication to the wanted HTTP request. currently we support basic authentication. see example above.
+
 * method = String - the HTTP method the request should be (GET/POST/PUT)
 * body = JSON - a JSON object the represents the body of the request we want to send.
 * headers = JSON - a JSON object the represents the headers of the request we want to send.

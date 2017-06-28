@@ -280,7 +280,7 @@ The request function is ment to make an HTTP request to an API.
 
 This function MUST return a JSON object with the following keys: url, method, body, headers:
 * url = String - the url that to make the HTTP request to.
-* internal_data = String - a JSON of data for internal use. NOTICE: the internal_data can only be used in the Actions scripts (and not in the Initial script).
+* internal_data = String - Optional - a JSON of data for internal use. NOTICE: the internal_data can only be used in the Actions scripts (and not in the Initial script).
 there are 2 available keys currently supported:
 1. "log_type": "items" - set the log type we want the integration to output. right only "items" is supported. 
 2. "authentication": used to set an authentication to the wanted HTTP request. currently we support basic authentication. see example above.

@@ -399,3 +399,33 @@ Host: api.konimbo.co.il
 GET /{apiVersion}/webhooks/?token={yourToken} HTTP/1.1
 Host: api.konimbo.co.il
 ```
+
+## Activating a webhook manually
+In somecases we will want to activate a webhook manually from cart's page(and automatically through a specific event that occured on the store)
+
+To do that, we need to create a form in cart page. The form's action should route to '/webhooks/trigger'
+with the following fields:
+
+1. id -  the id of the Cart - <input id="id" name="id" type="hidden" value="5315865">
+2. event - the event of the webhook. this will be used to find the webhook to activate - <input id="event" name="event" type="hidden" value="order_created"> 
+3. model - cart/order - the model we want to send it's payload with the webhook to the integration - <input id="model" name="model" type="hidden" value="cart">
+4. trigger_data[WHATEVER_FIELD_WE_WANT] - used for extra data we want to send with the webhook to the integration that isnt necessarily connected to a model's payload. u can send this field multiple times. 
+
+Example for such form
+```
+<form action="/webhooks/trigger" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="NinOp55uzgP1LoKm4TyDTHsjB23efsmtvQkPxd/7liM="></div>     <div class="input">
+       <input id="id" name="id" type="hidden" value="5315865">
+       <input id="event" name="event" type="hidden" value="order_created">
+       <input id="model" name="model" type="hidden" value="cart">
+       <input id="trigger_data_full_name" name="trigger_data[full_name]" type="hidden" value="זיו אריכא">
+       <input id="trigger_data_email" name="trigger_data[email]" type="hidden" value="ziv@aricha.co.il">
+       <input id="trigger_data_mobile_phone" name="trigger_data[mobile_phone]" type="hidden" value="0525594854">
+       <input id="trigger_data_full_address" name="trigger_data[full_address]" type="hidden" value="weisburg netanya">
+       <input id="trigger_data_note" name="trigger_data[note]" type="hidden" value="anat al tohli gvina">
+       <input id="store_subdomain" name="store_subdomain" type="hidden" value="macbubi">
+    </div>
+     <div class="button">
+     <input type="submit" value="בדוק זכאות למבצעים">
+     </div>
+</form>
+```

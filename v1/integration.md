@@ -8,7 +8,6 @@
 3. [Integration](#user-content-integration)
 4. [Trigger](#user-content-trigger)
 4. [Webhook](#user-content-webhook)
-5. [Special integration varaibles](#user-content-special-integration-variables)
 
 
 ### Background

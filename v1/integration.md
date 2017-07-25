@@ -283,6 +283,7 @@ This function MUST return a JSON object with the following keys: url, method, bo
 there are 2 available keys currently supported:
 1. "log_type": "items" - set the log type we want the integration to output. right only "items" is supported. 
 2. "authentication": used to set an authentication to the wanted HTTP request. currently we support basic authentication. see example above.
+3. "content_type": used to set the header "content_type"-'s value. its default is 'application/json'. u can set it to "blank" and it wont be sent at all.
 
 * method = String - the HTTP method the request should be (GET/POST/PUT)
 * body = JSON - a JSON object the represents the body of the request we want to send.

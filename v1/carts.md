@@ -25,25 +25,15 @@
 
 ### פירוט השדות
 
-שם השדה | הסבר | סכמה | דוגמא
-:---|---:|:---|:---
-id | מספר העגלה במערכת קונימבו | String | `1013564` `965487`
-upgrades | פירוט השדרוגים | Object | {<br>price: `100.00`,<br>title: `שדרוג ל32 ג'יגה'`,<br>topic_title: `שדרוג כרטיס הזיכרון`<br>quantity: `1`<br>}
-discounts | פירוט ההנחות | Object | 
-payments | מצב ההזמנה | String | `שולם` `אשראי - מלא`
-name | שם הלקוח | String | `ישראל ישראלי`
-email | אימייל הלקוח | String | `mail@domain.com`
-phone | טלפון הלקוח | String | `055-5555555`
-address | כתובת הלקוח | String | `שם הרחוב 3, שם העיר`
-note | הערת הלקוח | String | `בבקשה להתקשר לפני שמוציאים את המשלוח`
-total_price | סך הכל לתשלום | String | `2680.5`
-status_option_title | מצב ההזמנה | String | `אשראי - מלא`
-created_at | תאריך יצירת ההזמנה | Time (ISO-8601) | `2017-01-01T17:10:37Z`
-items | פירוט המוצרים | Object | {<br>id: `1305555`,<br>title: `טלפון סלולארי`,<br>code: `SKU#123`,<br>quantity: `2`,<br>price: `2780.50`<br>}
-
-discounts | פירוט ההנחות | Object | {<br>price: `200`,<br>title: `הנחה לחברים`,<br>quantity: `1`<br>}
-shipping | פרטי המשלוח | Object | {<br>id: `502135`,<br>title: `משלוח חינם בקנייה מעל 1000 שקל`,<br>price: `0`<br>}
-payments | פרטי התשלום | Object | {<br>number_of_payments: `12`,<br>special_first_payment: `237.5`,<br>single_payment: `233.0`<br>}
+שם השדה | סכמה | חובה | הסבר
+:---|:---|---:|---:
+title | String | כותרת ההנחה  | כן
+quantity | String | כמות ההנחה  | כן
+discount_value | String |   | כן
+discount_type | String |   | כן
+unit_price | String | ערך ההנחה  | כן
+type_name | String | לא | הערה על הסטטוס (טקסט חופשי)
+line_item_id | Integer | לא | מזהה השורה בעגלה שאליה נרצה לשייך את ההנחה)
 
 ### עגלה
 #### תיאור

@@ -6,9 +6,8 @@
 1. [הקדמה](#user-content-הקדמה)
 2. [EndPoints](#user-content-endpoints)
 3. [פירוט השדות](#user-content-פירוט-השדות)
-4. [הזמנה](#user-content-הזמנה)
-5. [רשימת הזמנות](#user-content-רשימת-הזמנות)
-6. [עריכת הזמנה](#user-content-עריכת-הזמנה)
+4. [עגלה](#user-content-עגלה)
+6. [עריכת עגלה](#user-content-עריכת-עגלה)
 
 ### הקדמה
 
@@ -121,7 +120,8 @@ RESPONSE:
 הקריאה הבאה תחזיר את שדות הid, items לעגלה 5552478
 
 ```
-GET /v1/carts/5552478?token=794fc87483d6b5d519a98300e7bfcffa7a7aba008160c61cbf9b50fb59ed35cf&attributes=id,total_price HTTP/1.1
+GET /v1/carts/5552478?token=794fc87483d6b5d519a98300e7bfcffa7a7aba008160c61cbf9b50fb59ed35cf&attributes=id,items
+HTTP/1.1
 Host: api.konimbo.co.il
 
 RESPONSE:
@@ -147,7 +147,7 @@ RESPONSE:
 העגלה חייבת להיות פתוחה לעריכה ולא נעולה על מנת שיהיה ניתן לעדכן אותה.
 #### EndPoint
 ```
-GET /v1/cartsa/5552478?token=794fc87483d6b5d519a98300e7bfcffa7a7aba008160c61cbf9b50fb59ed35cf&attributes=id,total_price HTTP/1.1
+GET /v1/carts/5552478?token=794fc87483d6b5d519a98300e7bfcffa7a7aba008160c61cbf9b50fb59ed35cf&attributes=id,total_price HTTP/1.1
 Host: api.konimbo.co.il
 
 RESPONSE:

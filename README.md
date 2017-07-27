@@ -72,3 +72,6 @@ X-Rate-Limit-Reset   | השעה שבה תתאפס הספירה ויהיה נית
 1. [מוצרים](https://github.com/konimboltd/api-documentation/blob/master/v1/items.md)
 2. [הזמנות](https://github.com/konimboltd/api-documentation/blob/master/v1/orders.md)
 3. [קבצים](https://github.com/konimboltd/api-documentation/blob/master/v1/amazons.md)
+4. [עגלות](https://github.com/konimboltd/api-documentation/blob/master/v1/carts.md)
+
+

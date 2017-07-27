@@ -33,7 +33,12 @@ discount_value | String |   | כן
 discount_type | String |   | כן
 unit_price | String | ערך ההנחה  | כן
 type_name | String | לא | הערה על הסטטוס (טקסט חופשי)
-line_item_id | Integer | לא | מזהה השורה בעגלה שאליה נרצה לשייך את ההנחה)
+line_item_id | Integer | לא | מזהה השורה בעגלה שאליה נרצה לשייך את ההנחה
+items | Integer | לא |  המוצרים בעגלה
+upgrades | Integer | לא |  השדרוגים של העגלה
+shipping | Integer | לא |  פרטיה משלוח
+payments | Integer | לא |  פרטי תשלומים
+total_price | Integer | לא |  סהכ מחיר העגלה
 
 ### עגלה
 #### תיאור

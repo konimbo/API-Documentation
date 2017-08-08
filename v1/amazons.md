@@ -20,6 +20,7 @@
 #### EndPoint
 ```
 POST /{apiVersion}/amazons/
+POST /{apiVersion}/amazons/write_file
 Host: api.konimbo.co.il
 ```
 

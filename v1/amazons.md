@@ -11,8 +11,11 @@
 בעזרת נקודת קצה זו ניתן לקרוא קבצים מ - Amazon s3
 ### EndPoints
 * [POST /{apiVersion}/amazons](#user-content-קריאת-קובץ)
+* [POST /{apiVersion}/amazons/write_file](#user-content-כתיבת-קובץ)
 
-### אמזון
+
+
+### קריאת-קובץ
 #### תיאור
 בעזרת השירות הזה, ניתן להחזיר מידע של קובץ XML או JSON
 את המידע ניתן להחזיר בפורמט XML או JSON, השליטה על כך מתבצעת דרך משתמש ה API
@@ -20,7 +23,6 @@
 #### EndPoint
 ```
 POST /{apiVersion}/amazons/
-POST /{apiVersion}/amazons/write_file
 Host: api.konimbo.co.il
 ```
 

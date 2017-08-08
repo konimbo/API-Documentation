@@ -82,16 +82,16 @@ Host: api.konimbo.co.il
 #### Parameters
 הפרמטרים הנדרשים הם פרטי התחברות ל amazon s3 ואת ה konimbo api token
 1. token = "konimbo_api_token"
-2. data - אובייקט שיכיל פרמטרים של קוניפוגרציה
-21. file_name - שם הקובץ שנרצה, לדוגמא myfile.json
-22. file_type - על פי שדה זה מבצעים המרה לתוכן שאותו נרצה לכתוב, האופציות הן: json/xml/string/query
-23. store_unique_token - מזהה חד חד ערכי שנשלח פר חנות, שימנע מחנויות שונות לגשת לקבצים לא שלהם
-24. credentials - אובייקט שיכיל את פרטי הבאקט שאליו נרצה לכתוב את הקובץ כולל פרטי גישה
-24.1 - region - הריג'ן של הבאקט
-2.4.2 - access_key_id - אקסס קי במידה ויש
-2.4.3 - secret_access_key - סיקרט אקסס קי במידה ויש
-2.4.5 - bucket_name -  konimbo-integration-files-bucket שם הבאקט שאליו נרצה לכתוב, אם לא ישלח יכתב לבאקט הדיפולטי
-3. content - תוכן הקובץ המבוקש. יכול להישלח כסטרינג או כאובייקט
+2. data - אובייקט שיכיל פרמטרים של קוניפוגרציה מכיל את סעיפים 3 עד 6
+3. file_name - שם הקובץ שנרצה, לדוגמא myfile.json
+4. file_type - על פי שדה זה מבצעים המרה לתוכן שאותו נרצה לכתוב, האופציות הן: json/xml/string/query
+5. store_unique_token - מזהה חד חד ערכי שנשלח פר חנות, שימנע מחנויות שונות לגשת לקבצים לא שלהם
+6. credentials - אובייקט שיכיל את פרטי הבאקט שאליו נרצה לכתוב את הקובץ כולל פרטי גישה, מכיל את סעיפים 7 עד 10
+7 - region - הריג'ן של הבאקט
+8 - access_key_id - אקסס קי במידה ויש
+9 - secret_access_key - סיקרט אקסס קי במידה ויש
+10 - bucket_name -  konimbo-integration-files-bucket שם הבאקט שאליו נרצה לכתוב, אם לא ישלח יכתב לבאקט הדיפולטי
+11. content - תוכן הקובץ המבוקש. יכול להישלח כסטרינג או כאובייקט
 
 #### Responses
 * 200 - Link to the requested file

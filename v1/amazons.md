@@ -83,6 +83,7 @@ Host: api.konimbo.co.il
 הפרמטרים הנדרשים הם פרטי התחברות ל amazon s3 ואת ה konimbo api token
 1. token = "konimbo_api_token"
 2. data - אובייקט שיכיל פרמטרים של קוניפוגרציה
+
  2.1. file_name - שם הקובץ שנרצה, לדוגמא myfile.json
  2.2. file_type - על פי שדה זה מבצעים המרה לתוכן שאותו נרצה לכתוב, האופציות הן: json/xml/string/query
  2.3. store_unique_token - מזהה חד חד ערכי שנשלח פר חנות, שימנע מחנויות שונות לגשת לקבצים לא שלהם

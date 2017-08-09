@@ -292,11 +292,11 @@ remove_from_item | Boolan | לא | כדי למחוק שיוך של סינון ל
 title | String | כן | שם התג
 group_name | String | לא | שם ערך הקבוצה
 seo_description | Integer | לא | מיקום ערך הקבוצה
-seo_keywords | Boolan | לא | במידה ורוצים ליצור סינון רוחבי יש לשלוח את הערך   true 
-seo_title | Boolan | לא | במידה ורוצים ליצור סינון רוחבי יש לשלוח את הערך   true 
-visable | Boolan | לא | במידה ורוצים ליצור סינון רוחבי יש לשלוח את הערך   true 
-slug | Boolan | לא | במידה ורוצים ליצור סינון רוחבי יש לשלוח את הערך   true 
-content | Boolan | לא | במידה ורוצים ליצור סינון רוחבי יש לשלוח את הערך   true 
+seo_keywords | Boolan | לא |    true 
+seo_title | Boolan | לא |    true 
+visable | Boolan | לא |    true 
+slug | Boolan | לא |    true 
+content | Boolan | לא |    true 
 use_name | Boolan | לא | תג רגיל או קטוגריה משנית   true 
 remove_from_item | Boolan | לא | כדי למחוק שיוך של סינון למוצר יש לשלוח שדה זה עם הערך true 
 

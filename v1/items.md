@@ -51,6 +51,8 @@ is_dad                 | Boolean         | כן | הגדר כמוצר אבא | `
 dad_id                 | Integer         | כן | יש להזין את מספר המערכת של המוצר (ID) של המוצר אבא | `1203547`
 zap_visable            | Boolean         | כן | האם להציג לזאפ את המוצר באתר המראה | `true`
 delivery_time          | Integer         | כן | מספר ימי אפסקה | `7`
+default_shipping       | Boolean         | כן | הגדר משלוחי ברירת מחדל | `true`
+
 
 
 #### שדות מיוחדים:

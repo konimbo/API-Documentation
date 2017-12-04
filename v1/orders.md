@@ -48,7 +48,7 @@ upgrades | פירוט השדרוגים | Object | {<br>price: `100.00`,<br>title
 discounts | פירוט ההנחות | Object | {<br>price: `200`,<br>title: `הנחה לחברים`,<br>quantity: `1`<br>}
 shipping | פרטי המשלוח | Object | {<br>id: `502135`,<br>title: `משלוח חינם בקנייה מעל 1000 שקל`,<br>price: `0`<br>}
 payments | פרטי התשלום | Object | {<br>number_of_payments: `12`,<br>special_first_payment: `237.5`,<br>single_payment: `233.0`<br>}
-newsletter | הרשמה לדיוור | Boolean  | {<br>true<br>}
+newsletter | הרשמה לדיוור | Boolean  | <br>true<br>
 
 ### הזמנה
 #### תיאור

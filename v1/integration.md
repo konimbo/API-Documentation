@@ -135,7 +135,7 @@ This function MUST return a JSON object with the following keys: url, method, bo
 * method = String - the HTTP method the request should be (GET/POST/PUT)
 * body = JSON - a JSON object the represents the body of the request we want to send.
 * headers = JSON - a JSON object the represents the headers of the request we want to send.
-* EXPECTED_CONTENT_TYPE = STRING\JSON\XML\QUERY - אם רוצים לשנות האופן בו מתקבלת התשובה מהשרת לסוג ספציפי ולא לקבל אוטומטי
+* expectedContentType = STRING\JSON\XML\QUERY - אם רוצים לשנות האופן בו מתקבלת התשובה מהשרת לסוג ספציפי ולא לקבל אוטומטי
 
 * filter
 ```

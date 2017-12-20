@@ -126,6 +126,7 @@ function request(data, vars) {
    "url": "https://api.konimbo.co.il/v1/orders/" + data[0]["order_id"] + "?token=" + vars["konimbo_api_token"] ,
    "method": "get",
    "body": {},
+   "expectedContentType": "string",
    "headers": {}
  }
 }

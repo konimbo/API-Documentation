@@ -304,6 +304,7 @@ create a trigger:
 5. Incase we dont want an extra layer of security - remove the checkbox "שכבת אבטחה נוספת".
 6. under "הגבלת פעילות" increate to maximum value - so you want get blocked while testing your integrations
 7. The integration variables we created in the Config part will be presented at the bottom of the page, and we can set data    in them.
+8. To get cross domain add to vars variable with key named "Access-Control-Allow-Origin", and in the integrtion enter the domain.
  
  after creating the Trigger, we will get unique url for it.
  in order to activate the integration we need to make an GET HTTP request to that url (you can use Postman to do so)

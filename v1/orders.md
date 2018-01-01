@@ -44,7 +44,7 @@ total_price | סך הכל לתשלום | String | `2680.5`
 status_option_title | מצב ההזמנה | String | `אשראי - מלא`
 created_at | תאריך יצירת ההזמנה | Time (ISO-8601) | `2017-01-01T17:10:37Z`
 items | פירוט המוצרים | Object | {<br>id: `1305555`,<br>title: `טלפון סלולארי`,<br>code: `SKU#123`,<br>quantity: `2`,<br>price: `2780.50`<br>}
-upgrades | פירוט השדרוגים ושיוך השדרוג לID המוצר הרלוונטי | Object | {<br>"item_id": 9565999,<br>price: `100.00`,<br>title: `שדרוג ל32 ג'יגה'`,<br>topic_title: `שדרוג כרטיס הזיכרון`<br>quantity: `1`<br>}
+upgrades | פירוט השדרוגים ושיוך השדרוג למזהה מוצר המוצר הרלוונטי | Object | {<br>"item_id": 9565999,<br>price: `100.00`,<br>title: `שדרוג ל32 ג'יגה'`,<br>topic_title: `שדרוג כרטיס הזיכרון`<br>quantity: `1`<br>}
 discounts | פירוט ההנחות | Object | {<br>price: `200`,<br>title: `הנחה לחברים`,<br>quantity: `1`<br>}
 shipping | פרטי המשלוח | Object | {<br>id: `502135`,<br>title: `משלוח חינם בקנייה מעל 1000 שקל`,<br>price: `0`<br>}
 payments | פרטי התשלום | Object | {<br>number_of_payments: `12`,<br>special_first_payment: `237.5`,<br>single_payment: `233.0`<br>}

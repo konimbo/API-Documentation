@@ -26,8 +26,8 @@
 ### EndPoints
 
 * [GET /{apiVersion}/orders](#user-content-רשימת-הזמנות)
-* [GET /{apiVersion}/order/{id}](#user-content-הזמנה)
-* [PUT /{apiVersion}/order/{id}](#user-content-עריכת-הזמנה)
+* [GET /{apiVersion}/orders/{id}](#user-content-הזמנה)
+* [PUT /{apiVersion}/orders/{id}](#user-content-עריכת-הזמנה)
 
 ### פירוט השדות
 

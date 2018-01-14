@@ -58,7 +58,7 @@ newsletter | הרשמה לדיוור | Boolean  | <br>true<br>
 
 #### EndPoint
 ```
-GET /{apiVersion}/order/{id}?token={yourToken}
+GET /{apiVersion}/orders/{id}?token={yourToken}
 ```
 #### Parameters
 ##### בקשת שדות מסויימים

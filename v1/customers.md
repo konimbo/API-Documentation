@@ -46,7 +46,7 @@ data_record_json | שדות נוספים ללקוח | Json |  { "email":"John1@g
 
 #### EndPoint
 ```
-GET /{apiVersion}/customers/0?token={yourToken}&email=test@konimbo.co.il
+GET /{apiVersion}/customers/{id}?token={yourToken}
 ```
 #### Parameters
 ##### בקשת שדות מסויימים
@@ -129,7 +129,12 @@ data_record_json | Json | לא | שדות נוספים שהוגדרו במערת
     "full_address": "קונימבו בדיקה",
     "mobile_phone": "098866982",
     "full_name": "שם מגניב",
-    "data_record_json": { "number":"20103", "longnumber": "514103910", "extra_name": "אירית", "extra_mail": "test2@konimbo.co.il" }
+    "data_record_json": {
+        "number":"20103",
+        "longnumber": "514103910",
+        "extra_name": "אירית",
+        "extra_mail": "test2@konimbo.co.il"
+    }
   }
 }
 

@@ -6,8 +6,8 @@
 1. [הקדמה](#user-content-הקדמה)
 2. [EndPoints](#user-content-endpoints)
 3. [פירוט השדות](#user-content-פירוט-השדות)
-4. [לקוח](#user-content-הזמנה)
-5. [עריכת הזמנה](#user-content-עריכת-הזמנה)
+4. [לקוח](#user-content-לקוח)
+5. [עריכת לקוח](#user-content-עריכת-לקוח)
 
 ### הקדמה
 לכל חנות יש לקוחות,

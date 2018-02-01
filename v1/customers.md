@@ -6,9 +6,8 @@
 1. [הקדמה](#user-content-הקדמה)
 2. [EndPoints](#user-content-endpoints)
 3. [פירוט השדות](#user-content-פירוט-השדות)
-4. [הזמנה](#user-content-הזמנה)
-5. [רשימת הזמנות](#user-content-רשימת-הזמנות)
-6. [עריכת הזמנה](#user-content-עריכת-הזמנה)
+4. [לקוח](#user-content-הזמנה)
+5. [עריכת הזמנה](#user-content-עריכת-הזמנה)
 
 ### הקדמה
 לכל חנות יש לקוחות,
@@ -36,7 +35,7 @@ created_at | תאריך יצירת הלקוח | Time (ISO-8601) | `2017-01-01T17
 updated_at | תאריך יצירת הלקוח | Time (ISO-8601) | `2017-01-01T17:10:37Z`
 newsletter | הרשמה לדיוור | Boolean  | <br>true<br>
 discount_title | מועדון לקוחות | String | `פלטינום`
-data_record_json | שדות נוספים ללקוח | Json |  { "email":"John1@gmail.com", "ContactPerson": "contact", "SalesPrsnName": "john" }
+data_record_json | שדות נוספים ללקוח | Json |  { "email":"John1@gmail.com", "Extra_name": "David", "Extra_number": "897561" }
 
 
 ### לקוח

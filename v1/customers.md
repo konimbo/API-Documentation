@@ -1,6 +1,6 @@
 # Konimbo API Docs
 
-## הזמנות
+## לקוחות
 ### תוכן עניינים
 0. [חזור לדף הראשי](https://github.com/konimboltd/api-documentation)
 1. [הקדמה](#user-content-הקדמה)

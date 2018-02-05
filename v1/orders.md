@@ -48,6 +48,7 @@ upgrades | פירוט השדרוגים ושיוך השדרוג למזהה מוצ
 discounts | פירוט ההנחות | Object | {<br>price: `200`,<br>title: `הנחה לחברים`,<br>quantity: `1`<br>}
 shipping | פרטי המשלוח | Object | {<br>id: `502135`,<br>title: `משלוח חינם בקנייה מעל 1000 שקל`,<br>price: `0`<br>}
 payments | פרטי התשלום | Object | {<br>number_of_payments: `12`,<br>special_first_payment: `237.5`,<br>single_payment: `233.0`<br>}
+credit_card_details | פרטי האשרי | Object | {<br>"credit_cart_brand_msg": "Permitted transaction.", <br>"debit_status": "AutoCommHold", <br>"credit_card_brand": "Visa", <br>"last_4d": "9999", <br>"card_expiration": "01/25", <br>"personal_id": "337655830", <br>"order_confirmation_id": "0044071", <br>"credit_cart_token": "1053655550189999", <br>"response_date": "2018-02-05T14:13:49.000Z", <br>"shovar_number": "005546"<br>}
 newsletter | הרשמה לדיוור | Boolean  | <br>true<br>
 
 ### הזמנה

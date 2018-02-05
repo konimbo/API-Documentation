@@ -18,9 +18,9 @@
 
 ### EndPoints
 
-* [GET /{apiVersion}/customers/{id}?token={yourToken}](#user-content-לקוח-ספציפי)
+* [GET /{apiVersion}/customers/?token={yourToken}&email=itamar@konimbo.co.il](#user-content-לקוח-ספציפי)
 * [POST /{apiVersion}/customers/](#user-content-יצירת-לקוח)
-* [PUT /{apiVersion}/customers/{id}](#user-content-עריכת-לקוח)
+* [PUT /{apiVersion}/customers/0](#user-content-עריכת-לקוח)
 
 ### פירוט השדות
 

@@ -52,7 +52,7 @@ dad_id                 | Integer         | כן | יש להזין את מספר 
 zap_visable            | Boolean         | כן | האם להציג לזאפ את המוצר באתר המראה | `true`
 delivery_time          | Integer         | כן | מספר ימי אפסקה | `7`
 default_shipping       | Boolean         | כן | הגדר משלוחי ברירת מחדל | `true`
-shipping_option_ids    | Array           | כן | הגדר משלוחים לפי ID אותם אפשר לקבל במערכת קונימבו |  ["1","2"]
+shipping_option_ids    | Array           | כן | הגדר משלוחים לפי מספר מזהה ייחודי של המערכת, מספר מזהה זה אפשר לקבל במערכת קונימבו |  ["1","2"]
 
 
 

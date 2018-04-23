@@ -418,7 +418,20 @@ code | String | כן | המק"ט שלפיו יש לעדכן את המלאי
 price | Numeric | לא | תוספת מחיר לוריאציה הזו
 free | Numeric | לא | כמות מוצרים במלאי
 
-דוגמא:
+דוגמא לעדכון מלאי קיים
+```JSON
+"inventory": [{
+  "code": "PHONE#GOLD",
+  "price": "100",
+  "free": "99"
+}, {
+  "code": "PHONE#SILVER",
+  "price": "0",
+  "free": "102"
+}]
+```
+
+דוגמא לעדכון ערך מלאי מתוך מלאי קיים במערכת לפי ID
 ```JSON
 "inventory": [{
   "id": "5785468",
@@ -427,6 +440,23 @@ free | Numeric | לא | כמות מוצרים במלאי
   "free": "99"
 }, {
   "id": "5785469",
+  "code": "PHONE#SILVER",
+  "price": "0",
+  "free": "102"
+}]
+```
+
+דוגמא ליצירת סוג מלאי חדש וערך מלאי והוספתו למוצר
+```JSON
+"inventory": [{
+  "upgrade_topic_title": "צבע - גודל",
+  "upgrade_title": "זהב - XL",
+  "code": "PHONE#GOLD",
+  "price": "100",
+  "free": "99"
+}, {
+  "upgrade_topic_title": "צבע - גודל",
+  "upgrade_title": "כסף - L",
   "code": "PHONE#SILVER",
   "price": "0",
   "free": "102"

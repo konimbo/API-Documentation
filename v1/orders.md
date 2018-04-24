@@ -163,6 +163,7 @@ GET /{apiVersion}/orders?token={yourToken}
 created_at_min | מחזיר את כל ההזמנות שנוצרו אחרי הזמן הנתון | `created_at_min=2017-01-01T09:00:00Z`
 created_at_max | מחזיר את כל ההזמנות שנוצרו לפני הזמן הנתון | `created_at_max=2016-01-01T09:00:00Z`
 payment_status | מחזיר רק הזמנות עם מצב התשלום הנתון | `payment_status=שולם`
+status_option_title | מחזיר רק הזמנות עם מצב הזמנה הנתון | `status_option_title=הזמנה חדשה`
 
 ##### מיון
 

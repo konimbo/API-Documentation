@@ -24,9 +24,15 @@
 ### EndPoints
 * [GET /{apiVersion}/items](#user-content-מוצר)
 * [POST /{apiVersion}/items](#user-content-יצירת-מוצר)
-* [GET /{apiVersion}/items/{id|code|second_code}](#user-content-מוצרים)
-* [PUT /{apiVersion}/items/{id|code|second_code}](#user-content-עריכת-מוצר)
-* [DELETE /{apiVersion}/items/{id|code|second_code}](#user-content-מחיקת-מוצר)
+* [GET /{apiVersion}/items/{id}](#user-content-מוצרים)
+* [GET /{apiVersion}/items/?token=XXXX?code={code}](#user-content-מוצרים)
+* [GET /{apiVersion}/items/?token=XXXX?second_code={second_code}](#user-content-מוצרים)
+* [PUT /{apiVersion}/items/{id}](#user-content-עריכת-מוצר)
+* [PUT /{apiVersion}/items/?token=XXXX?code={code}](#user-content-עריכת-מוצר)
+* [PUT /{apiVersion}/items/?token=XXXX?second_code={second_code}](#user-content-עריכת-מוצר)
+* [DELETE /{apiVersion}/items/{id}](#user-content-מחיקת-מוצר)
+* [DELETE /{apiVersion}/items/?token=XXXX?code={code}](#user-content-מחיקת-מוצר)
+* [DELETE /{apiVersion}/items/?token=XXXX?second_code={second_code}](#user-content-מחיקת-מוצר)
 
 ### פירוט השדות
 #### שדות פשוטים:

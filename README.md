@@ -7,7 +7,7 @@
 4. [אוטנטיקציה](#user-content-אוטנטיקציה)
 5. [עימוד](#user-content-עימוד)
 6. [הגבלת קריאות](#user-content-הגבלת-קריאות)
-7. [נקודות קצה](#user-content-נקודות-קצה)
+7. [מודולים](#user-content-נקודות-קצה)
 
 ### הקדמה
 
@@ -71,7 +71,6 @@ X-Rate-Limit-Reset   | השעה שבה תתאפס הספירה ויהיה נית
 ### נקודות קצה
 1. [מוצרים](https://github.com/konimboltd/api-documentation/blob/master/v1/items.md)
 2. [הזמנות](https://github.com/konimboltd/api-documentation/blob/master/v1/orders.md)
-3. [קבצים](https://github.com/konimboltd/api-documentation/blob/master/v1/amazons.md)
-4. [עגלות](https://github.com/konimboltd/api-documentation/blob/master/v1/carts.md)
+3. [לקוחות](https://github.com/konimboltd/api-documentation/blob/master/v1/customers.md)
 
 

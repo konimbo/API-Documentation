@@ -287,15 +287,20 @@ remove_from_item | Boolan | לא | כדי למחוק שיוך של סינון ל
 ניתן רק להסיר שיוך של מוצר לסינון וערך סינון מסויים, לא ניתן לערוך את הסינון עצמו
 
 * מחיקת שיוך קיים בין מוצר לסינון וערך סינון קיימים
-
 ```JSON
-"filters": [{
-    "group_title": "סוג אביזר",
-    "group_value_title": "ברגים",
-    "group_position": "1",
-    "group_value_position": "2",
-    "remove_from_item": "true"
-}]
+{
+  "token": "xxxxxxxxxxxxxx",
+  "item": {
+    "filters": [
+        {
+            "id": 78965421,
+            "group_title": "צבע",
+            "group_value_title": "ירוק",
+            "remove_from_item": "true"
+        }
+    ]
+  }
+}
 ```
 ##### תגים:
 שדה זה ניתן לעדכון.

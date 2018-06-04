@@ -22,17 +22,17 @@
 
 כברירת מחדל, אפשר למצוא מוצר לפי id, כדי לשנות הגדרה זו, נא ליצור קשר עם התמיכה.
 ### EndPoints
-* [GET /{apiVersion}/items](#user-content-מוצר)
-* [POST /{apiVersion}/items](#user-content-יצירת-מוצר)
-* [GET /{apiVersion}/items/{id}](#user-content-מוצרים)
-* [GET /{apiVersion}/items/0?token=XXXX&code={code}](#user-content-מוצרים)
-* [GET /{apiVersion}/items/0?token=XXXX&second_code={second_code}](#user-content-מוצרים)
-* [PUT /{apiVersion}/items/{id}](#user-content-עריכת-מוצר)
-* [PUT /{apiVersion}/items/0?code={code}](#user-content-עריכת-מוצר)
-* [PUT /{apiVersion}/items/0?second_code={second_code}](#user-content-עריכת-מוצר)
-* [DELETE /{apiVersion}/items/{id}](#user-content-מחיקת-מוצר)
-* [DELETE /{apiVersion}/items/0?token=XXXX&code={code}](#user-content-מחיקת-מוצר)
-* [DELETE /{apiVersion}/items/0?token=XXXX&second_code={second_code}](#user-content-מחיקת-מוצר)
+* [GET /v1/items](#user-content-מוצר)
+* [POST /v1/items](#user-content-יצירת-מוצר)
+* [GET /v1/items/{id}](#user-content-מוצרים)
+* [GET /v1/items/0?token=XXXX&code={code}](#user-content-מוצרים)
+* [GET /v1/items/0?token=XXXX&second_code={second_code}](#user-content-מוצרים)
+* [PUT /v1/items/{id}](#user-content-עריכת-מוצר)
+* [PUT /v1/items/0?code={code}](#user-content-עריכת-מוצר)
+* [PUT /v1/items/0?second_code={second_code}](#user-content-עריכת-מוצר)
+* [DELETE /v1/items/{id}](#user-content-מחיקת-מוצר)
+* [DELETE /v1/items/0?token=XXXX&code={code}](#user-content-מחיקת-מוצר)
+* [DELETE /v1/items/0?token=XXXX&second_code={second_code}](#user-content-מחיקת-מוצר)
 
 ### פירוט השדות
 #### שדות פשוטים:

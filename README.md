@@ -76,6 +76,10 @@ X-Rate-Limit-Current | מספר הקריאה בספירה הנוכחית
 X-Rate-Limit-Maximum | כמות הקריאות שתגרום לחסימת המשתמש
 X-Rate-Limit-Reset   | השעה שבה תתאפס הספירה ויהיה ניתן לבצע קריאות מחדש
 
+אם מתקבלת ההודעה:
+"You have reached the maximum amount of items, look at the X-Limit-Records-XXX headers"
+יש לבקש הגדלה של מספר הרשומות הניתנות לעדכון תחת הטוק.
+
 בעת חסימה, יוחזר מהשרת `Http Response 401 Unauthorized`
 
 ### מודולים

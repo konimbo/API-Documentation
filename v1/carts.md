@@ -39,6 +39,7 @@ upgrades | Integer | לא |  השדרוגים של העגלה
 shipping | Integer | לא |  פרטיה משלוח
 payments | Integer | לא |  פרטי תשלומים
 total_price | Integer | לא |  סהכ מחיר העגלה
+coupon_code | Integer | לא |  קוד הקופון
 
 ### עגלה
 #### תיאור

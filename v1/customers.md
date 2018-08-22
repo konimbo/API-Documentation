@@ -107,7 +107,7 @@ Content-Type: application/json
 
 שם השדה | סכמה | חובה | הסבר
 :---|:---|---:|---:
-email | String | כן | מייל הלקוח
+email | String | כן | מייל הלקוח *ניתן לביצוע על ידי טוקן ייחודי שעובד לפי ID
 newsletter | Boolean | לא|  האם הלקוח אישר שליחת דיוור)
 full_address | String | לא | כתובת מלאה של הלקוח)
 mobile_phone | String | לא | מספר הנייד של הלקוח)

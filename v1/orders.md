@@ -48,8 +48,34 @@ upgrades | פירוט השדרוגים ושיוך השדרוג למזהה מוצ
 discounts | פירוט ההנחות | Object | {<br>price: `200`,<br>title: `הנחה לחברים`,<br>quantity: `1`<br>}
 shipping | פרטי המשלוח | Object | {<br>id: `502135`,<br>title: `משלוח חינם בקנייה מעל 1000 שקל`,<br>price: `0`<br>}
 payments | פרטי התשלום | Object | {<br>number_of_payments: `12`,<br>special_first_payment: `237.5`,<br>single_payment: `233.0`<br>}
-credit_card_details | פרטי האשרי | Object | {<br>"credit_cart_brand_msg": "Permitted transaction.", <br>"debit_status": "AutoCommHold", <br>"credit_card_brand": "Visa", <br>"last_4d": "9999", <br>"card_expiration": "01/25", <br>"personal_id": "337655830", <br>"order_confirmation_id": "0044071", <br>"credit_cart_token": "1053655550189999", <br>"response_date": "2018-02-05T14:13:49.000Z", <br>"shovar_number": "005546"<br>}
+credit_card_details | פרטי האשרי | Object | {<br>"credit_cart_brand_msg": "Permitted transaction.", <br>"debit_status": "AutoCommHold", <br>"credit_card_brand": "Visa", <br>"last_4d": "9999", <br>"card_expiration": "01/25", <br>"personal_id": "337655830", <br>"order_confirmation_id": "0044071", <br>"credit_cart_token": "1053655550189999", <br>"response_date": "2018-02-05T14:13:49.000Z", <br>"shovar_number": "005546"<br>"issued_credit_company": "Alphacard"<br>"issued_company_number": "6"<br>"card_sub_type": "0"<br>}
 newsletter | הרשמה לדיוור | Boolean  | <br>true<br>
+
+### credit_card_details פירוט השדות
+
+שם השדה | הסבר | סכמה | דוגמא
+:---|---:|:---|:---
+issued_credit_company | שם החברה המנפיקה | String | `Alphacard`
+issued_company_number | מספר החברה הנפיקה | String | `6`
+card_sub_type | תת סוג כרטיס | String | `0`
+
+חברה מנפיקה
+קוד – 1 – ישראכרט
+קוד -2 – ויזה
+קוד -3 - דיינרס
+קוד -4 - אמקס
+קוד -5 - JCBde
+קוד -6 - לאומיקרד
+
+תת סוג כרטיס
+קוד – 0 – רגיל 
+קוד – 1 – זהב
+קוד – 2 – עסקים
+קוד – 3 – חו\"ל
+קוד – 4 – חיוב מיידי
+קוד – 5 – דלק
+קוד – 6 – צעיר
+
 
 ### הזמנה
 #### תיאור

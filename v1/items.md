@@ -55,6 +55,7 @@ position               | Integer         | כן | מיקום המוצר | `123`
 quantity               | Integer         | כן | מלאי פשוט | `10`
 warranty               | String          | כן | אחריות | `5 שנים`
 matching_models        | String          | כן | דגמים מתאימים | מדפסת מדגם`
+spec_text              | String          | כן | מפרט בטקסט פתוח | גודל 10 סנטימטר`
 is_dad                 | Boolean         | כן | הגדר כמוצר אבא | `true`
 dad_id                 | Integer         | כן | יש להזין את מספר המערכת של המוצר (ID) של המוצר אבא | `1203547`
 zap_visable            | Boolean         | כן | האם להציג לזאפ את המוצר באתר המראה | `true`

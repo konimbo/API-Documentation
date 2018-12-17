@@ -187,29 +187,30 @@ BODY:
 {
     "token": "794fc87483d6b5d519a98300e7bfcffa7a7aba008160c61cbf9b50fb59ed35cf",
     "cart": {
-        "discounts": {
+        "discounts": [{
             "title": "הנחת מקורבים",
             "quantity": 1,
             "discount_value": 12,
             "unit_price": 15,
             "discount_type": "₪"
-        }
+        }]
     }
 }
 ```
 
 #### מחיקת הנחות
-ניתן למחוק הנחות על מנת לאפשר עדכון של הנחות
-ניתן למחוק את כל ההנחות או רק הנחות מסויימות לפי השדה type_name
-על מנת למחוק את כולם יש לבצע 
-    	"destroy_discounts": {"type_name": "all"},
-ואם רוצים למחוק חלק מההנחות יש להוסיף בtype name את השם שרוצים למחוק במקום all
+ניתן למחוק הנחות על מנת לאפשר עדכון של הנחות, ניתן למחוק את כל ההנחות או רק הנחות מסויימות לפי השדה:
+type_name
+
+על מנת למחוק את כולם יש להוסיף:
+destroy_discounts": {"type_name": "all"}
+destroy_discounts": {"type_name": "como"}
 ````
 {
     "token": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     "cart": {
     	"destroy_discounts": {"type_name": "all"},
-        "discounts": {
+        "discounts": [{
             "title": "הנחת מקורבים",
             "quantity": 1,
             "discount_value": 10,
@@ -218,7 +219,7 @@ BODY:
             "line_item_id": 17134928,
             "coupon_code": "12345",
             "type_name": "itam"
-        }
+        }]
     }
 }
 ````

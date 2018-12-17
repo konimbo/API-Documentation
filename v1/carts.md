@@ -139,7 +139,7 @@ RESPONSE:
 
 ### עריכת עגלה
 #### תיאור
-בעזרת השירות הזה, ניתן לעדכן מידע לעגלה ספציפית.
+בעזרת השירות הזה, ניתן להוסיף הנחה לעגלה ספציפית.
 העגלה חייבת להיות פתוחה לעריכה ולא נעולה על מנת שיהיה ניתן לעדכן אותה.
 #### EndPoint
 ```
@@ -197,6 +197,31 @@ BODY:
     }
 }
 ```
+
+#### מחיקת הנחות
+ניתן למחוק הנחות על מנת לאפשר עדכון של הנחות
+ניתן למחוק את כל ההנחות או רק הנחות מסויימות לפי השדה type_name
+על מנת למחוק את כולם יש לבצע 
+    	"destroy_discounts": {"type_name": "all"},
+ואם רוצים למחוק חלק מההנחות יש להוסיף בtype name את השם שרוצים למחוק במקום all
+````
+{
+    "token": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "cart": {
+    	"destroy_discounts": {"type_name": "all"},
+        "discounts": {
+            "title": "הנחת מקורבים",
+            "quantity": 1,
+            "discount_value": 10,
+            "unit_price": 15,
+            "discount_type": "%",
+            "line_item_id": 17134928,
+            "coupon_code": "12345",
+            "type_name": "itam"
+        }
+    }
+}
+````
 
 #### Responses
 * 200 - The updated order

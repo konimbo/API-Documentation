@@ -143,7 +143,6 @@ RESPONSE:
 בעזרת השירות הזה, ניתן להוסיף הנחה לעגלה ספציפית.
 העגלה חייבת להיות פתוחה לעריכה ולא נעולה על מנת שיהיה ניתן לעדכן אותה.
 #### EndPoint
-```
 PUT /v1/carts/5552478?token=794fc87483d6b5d519a98300e7bfcffa7a7aba008160c61cbf9b50fb59ed35cf HTTP/1.1
 Host: api.konimbo.co.il
 

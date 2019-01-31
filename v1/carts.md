@@ -40,6 +40,7 @@ shipping | Integer | לא |  פרטיה משלוח
 payments | Integer | לא |  פרטי תשלומים
 total_price | Integer | לא |  סהכ מחיר העגלה
 coupon_code | Integer | לא |  קוד הקופון
+var_in_json | string/json | שדות נוספים (מבנה נתונים) | לא
 
 ### עגלה
 #### תיאור
@@ -143,23 +144,9 @@ RESPONSE:
 העגלה חייבת להיות פתוחה לעריכה ולא נעולה על מנת שיהיה ניתן לעדכן אותה.
 #### EndPoint
 ```
-GET /v1/carts/5552478?token=794fc87483d6b5d519a98300e7bfcffa7a7aba008160c61cbf9b50fb59ed35cf&attributes=id,total_price HTTP/1.1
+PUT /v1/carts/5552478?token=794fc87483d6b5d519a98300e7bfcffa7a7aba008160c61cbf9b50fb59ed35cf HTTP/1.1
 Host: api.konimbo.co.il
 
-RESPONSE:
-{
-    "id": "5552478",
-    "items": [
-        {
-            "id": 1404903,
-            "title": "ckvckv",
-            "code": "",
-            "quantity": 1,
-            "price": null
-        }
-    ]
-}
-```
 #### שדות שניתן לעדכן לעגלה
 
 ##### discounts
@@ -174,13 +161,16 @@ discount_type | String |   | כן
 unit_price | String | ערך ההנחה  | כן
 type_name | String | לא | הערה על הסטטוס (טקסט חופשי)
 line_item_id | Integer | לא | מזהה השורה בעגלה שאליה נרצה לשייך את ההנחה)
+var_in_json | string/json | שדות נוספים (מבנה נתונים) | לא
+
+שדות נוספים יש להקים דרך הממשק ניהול מול התמיכה של קונימבו
 
 דוגמאות:
 
 הוספת הנחה לעגלה
 
 ```
-PUT /v1/cartsa/5552478?token=794fc87483d6b5d519a98300e7bfcffa7a7aba008160c61cbf9b50fb59ed35cf&attributes=id,total_price HTTP/1.1
+PUT /v1/cartsa/5552478?token=794fc87483d6b5d519a98300e7bfcffa7a7aba008160c61cbf9b50fb59ed35cf HTTP/1.1
 Host: api.konimbo.co.il
 
 BODY:
@@ -192,7 +182,8 @@ BODY:
             "quantity": 1,
             "discount_value": 12,
             "unit_price": 15,
-            "discount_type": "₪"
+            "discount_type": "₪",
+            "var_in_json": "{\"TROLLEY_KEY\":\"14408\",\"DEAL_NO\":\"1843\",\"line_item_id\":\"18310813\"}" //this is stringify JSON
         }]
     }
 }

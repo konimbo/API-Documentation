@@ -62,6 +62,8 @@ is_dad                 | Boolean         | כן | הגדר כמוצר אבא | `
 dad_id                 | Integer         | כן | יש להזין את מספר המערכת של המוצר (ID) של המוצר אבא | `1203547`
 zap_visable            | Boolean         | כן | האם להציג לזאפ את המוצר באתר המראה | `true`
 delivery_time          | Integer         | כן | מספר ימי אפסקה | `7`
+discount_group_id      | Integer         | כן | מספר מזהה של קבוצת ההנחה | 5489613`
+discount_group_title   | String          | כן | שם ההנחה | מבצע 3 ב100`
 default_shipping       | Boolean         | כן | הגדר משלוחי ברירת מחדל | `true`
 shipping_option_ids    | Array           | כן | הגדר משלוחים לפי מספר מזהה ייחודי של המערכת, מספר מזהה זה אפשר לקבל במערכת קונימבו |  ["1","2"]
 

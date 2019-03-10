@@ -35,20 +35,7 @@ total_price | Integer | לא |  סהכ מחיר העגלה
 var_in_json | Object | לא | שדות נוספים (מבנה נתונים)
 discounts | Object | כן | הנחות
 destroy_discounts | Object | כן | מחיקת הנחות
-
-### הנחה - discounts פירוט השדות של אובייקט
-שם השדה | סכמה | ניתן לכתיבה | הסבר
-:---|:---|---:|---:
-title | String | כן  | כותרת ההנחה
-quantity | String | כן  | כמות ההנחה
-discount_value | String | ערך ההנחה | כן
-discount_type | String | סוג ההנחה ("₪" או "%") | כן
-unit_price | String | כן | ערך ההנחה ליחידה 
-type_name | String | כן | הערה על הסטטוס (טקסט חופשי)
-line_item_id | Integer | כן | מזהה השורה בעגלה שאליה נרצה לשייך את ההנחה
-total_price | Integer | לא |  סהכ מחיר העגלה
-coupon_code | Integer | כן |  קוד הקופון
-var_in_json | string/json | לא | שדות נוספים (מבנה נתונים) 
+ 
 
 ### עגלה
 #### תיאור
@@ -159,16 +146,18 @@ Host: api.konimbo.co.il
 ##### discounts
 ניתן להוסיף הנחה חדשה לעגלה
 
-שם השדה | סכמה | חובה | הסבר
+שם השדה | סכמה | ניתן לכתיבה | הסבר
 :---|:---|---:|---:
-title | String | כותרת ההנחה  | כן
-quantity | String | כמות ההנחה  | כן
-discount_value | String |   | כן
-discount_type | String |   | כן
-unit_price | String | ערך ההנחה  | כן
-type_name | String | לא | הערה על הסטטוס (טקסט חופשי)
-line_item_id | Integer | לא | מזהה השורה בעגלה שאליה נרצה לשייך את ההנחה)
-var_in_json | string/json | שדות נוספים (מבנה נתונים) | לא
+title | String | כן  | כותרת ההנחה
+quantity | String | כן  | כמות ההנחה
+discount_value | String | כן | ערך ההנחה
+discount_type | String | כן | סוג ההנחה ("₪" או "%")
+unit_price | String | כן | ערך ההנחה ליחידה 
+type_name | String | כן | הערה על הסטטוס (טקסט חופשי)
+line_item_id | Integer | כן | מזהה השורה בעגלה שאליה נרצה לשייך את ההנחה
+total_price | Integer | לא |  סהכ מחיר העגלה
+coupon_code | Integer | כן |  קוד הקופון
+var_in_json | string/json | לא | שדות נוספים (מבנה נתונים)שדות נוספים (מבנה נתונים) | לא
 
 שדות נוספים יש להקים דרך הממשק ניהול מול התמיכה של קונימבו
 

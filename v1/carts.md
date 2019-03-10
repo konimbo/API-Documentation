@@ -23,24 +23,32 @@
 * [GET /{apiVersion}/carts/{id}](#user-content-עגלה)
 * [PUT /{apiVersion}/carts/{id}](#user-content-עריכת-עגלה)
 
-### פירוט השדות
-
-שם השדה | סכמה | חובה | הסבר
+### פירוט השדות עגלה
+שם השדה | סכמה | ניתן לכתיבה | הסבר
 :---|:---|---:|---:
-title | String | כותרת ההנחה  | כן
-quantity | String | כמות ההנחה  | כן
-discount_value | String |   | כן
-discount_type | String |   | כן
-unit_price | String | ערך ההנחה  | כן
-type_name | String | לא | הערה על הסטטוס (טקסט חופשי)
-line_item_id | Integer | לא | מזהה השורה בעגלה שאליה נרצה לשייך את ההנחה
-items | Integer | לא |  המוצרים בעגלה
-upgrades | Integer | לא |  השדרוגים של העגלה
-shipping | Integer | לא |  פרטיה משלוח
-payments | Integer | לא |  פרטי תשלומים
+id | Integer | לא | מספר מזהה העגלה
+items | Object | לא |  המוצרים בעגלה
+upgrades | Object | לא |  השדרוגים של העגלה
+shipping | Object | לא |  פרטי משלוח
+payments | Object | לא |  פרטי תשלומים
 total_price | Integer | לא |  סהכ מחיר העגלה
-coupon_code | Integer | לא |  קוד הקופון
-var_in_json | string/json | שדות נוספים (מבנה נתונים) | לא
+var_in_json | Object | לא | שדות נוספים (מבנה נתונים)
+discounts | Object | כן | הנחות
+destroy_discounts | Object | כן | מחיקת הנחות
+
+### הנחה - discounts פירוט השדות של אובייקט
+שם השדה | סכמה | ניתן לכתיבה | הסבר
+:---|:---|---:|---:
+title | String | כן  | כותרת ההנחה
+quantity | String | כן  | כמות ההנחה
+discount_value | String | ערך ההנחה | כן
+discount_type | String | סוג ההנחה ("₪" או "%") | כן
+unit_price | String | כן | ערך ההנחה ליחידה 
+type_name | String | כן | הערה על הסטטוס (טקסט חופשי)
+line_item_id | Integer | כן | מזהה השורה בעגלה שאליה נרצה לשייך את ההנחה
+total_price | Integer | לא |  סהכ מחיר העגלה
+coupon_code | Integer | כן |  קוד הקופון
+var_in_json | string/json | לא | שדות נוספים (מבנה נתונים) 
 
 ### עגלה
 #### תיאור

@@ -18,9 +18,10 @@
 
 ### EndPoints
 
-* [GET /{apiVersion}/customers/?token={yourToken}&email=itamar@konimbo.co.il](#user-content-לקוח-ספציפי)
+* [GET /{apiVersion}/customers/?token={yourToken}&email=test@konimbo.co.il](#user-content-לקוח-ספציפי)
 * [POST /{apiVersion}/customers/](#user-content-יצירת-לקוח)
-* [PUT /{apiVersion}/customers/0](#user-content-עריכת-לקוח)
+* [PUT /{apiVersion}/customers/0 עריכת לקוח לפי מייל](#user-content-עריכת-לקוח)
+* [PUT /{apiVersion}/customers/{id} עריכת לקוח לפי ID](#user-content-עריכת-לקוח)
 
 ### פירוט השדות
 
@@ -91,13 +92,15 @@ RESPONSE:
 בעזרת השירות הזה, ניתן לעדכן מידע ללקוח ספציפי
 #### EndPoint
 ```
-PUT /{apiVersion}/customers/0 HTTP/1.1
+PUT /{apiVersion}/customers/0 HTTP/1.1 יש להגדיר במשתמש הAPI עבודה לפי email
+PUT /{apiVersion}/customers/{id} HTTP/1.1 יש להגדיר במשתמש הAPI עבודה לפי id
 Host: api.konimbo.co.il
 Content-Type: application/json
 
 {
   "token": {yourToken},
   "customer": {
+    "email": "value@gmail.com", // במקרה של עבודה לפי מייל
     "attribute1": "value",
     "attribute2": "value"
   }

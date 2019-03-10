@@ -65,7 +65,7 @@ GET /{apiVersion}/customers/{id}?token={yourToken}
 * 500 - Internal error
 
 #### דוגמאות
-הקריאה הבאה תחזיר את כל הפרמטרים המורשים של הזמנה זו
+הקריאה הבאה תחזיר את כל הפרמטרים המורשים של לקוח זה
 
 ```
 GET /{apiVersion}/customers/0?token=t48jt4i3jg03j4ig0jg43943949304940923f4332322&email=test@konimbo.co.il
@@ -103,7 +103,7 @@ Content-Type: application/json
   }
 }
 ```
-#### שדות שניתן לעדכן להזמנה
+#### שדות שניתן לעדכן לקוח
 
 שם השדה | סכמה | חובה | הסבר
 :---|:---|---:|---:

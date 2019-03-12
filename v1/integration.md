@@ -164,11 +164,35 @@ For example: if we want to load items into Konimbo system, the inital script wil
 
 * hasAnotherPage
 
-need to complete
+When working with the Konimbo API (or any other) getting the list of products is limited to 300 at a time each time I a page, so there is a need to run the integration multiple times, so it will go through all pages and all products.
+
+This function return false or true will determine if the integration will run again for another page, it will do it by increasing the number in the function data on the script step (0 step)
+
+```
+function data(request, vars) {
+  return {
+    "_page": 1
+  }
+}
+```
+
+this variable we can use in the next function like this:
+
+```
+function request(data, vars) {
+    var url = "https://api.konimbo.co.il/v1/items/?token=" + vars["konimbo_api_token"] + "&page=" + data[0]["_page"];
+  return {
+    "url": url,
+    "method": "get",
+    "headers": {},
+    "body": {}
+  }
+}
+```
+every time it will return true the integration will run again with a bigger number
 
 ```
 function hasAnotherPage(response, vars) {
- // there is no use with this function at this integration
  return false;
 }
 ```

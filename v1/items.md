@@ -615,6 +615,7 @@ Content-Type: application/json
 שדות חובה:
 * title
 * store_category_title
+* code - אם רוצים לעדכן מוצר במקרה שהוא קיים, כלומר אם המק"ט קיים אז המוצר יתעדכן אם לא המוצר יוקם
 
 #### Responses
 * 200 - The created item

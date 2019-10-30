@@ -65,7 +65,7 @@ GET /{apiVersion}/carts/{id}?token={yourToken}
 #### דוגמאות
 הקריאה הבאה תחזיר את כל הפרמטרים המורשים של הזמנה זו
 
-```
+```JSON
 GET /v1/carts/5552478?token=794fc87483d6b5d519a98300e7bfcffa7a7aba008160c61cbf9b50fb59ed35cf HTTP/1.1
 Host: api.konimbo.co.il
 
@@ -74,11 +74,39 @@ RESPONSE:
     "id": "5552478",
     "items": [
         {
-            "id": 1404903,
-            "title": "ckvckv",
-            "code": "",
+        "item_id": 1591881,
+        "line_item_id": 25324984,
+        "title": "תיקון מסך אייפון 8 פלוס, iphone 8 Plus",
+        "code": "",
+        "second_code": "H10572",
+        "quantity": 1,
+        "price": "179.0",
+        "unit_price": "179.0",
+        "options": [
+            {
+                "upgrade_title": "שחור",
+                "upgrade_topic_title": "אנא ציין/י צבע מכשיר  -"
+            },
+            {
+                "upgrade_title": "תיקון בסניף-מעבדת תיקונים פתח תקווה (הקניון הגדול)",
+                "upgrade_topic_title": "בחר סוג משלוח",
+                "upgrade_topic_id": 17142
+            },
+            {
+                "upgrade_title": "0508281066",
+                "upgrade_topic_title": "מספר ליצירת קשר לאחר ביצוע התיקון מספר נייד "
+            }
+        ]
+        },
+        {
+            "id": 39253,
+            "title": "תיקון מכשיר עצמאית במעבדה ",
+            "price": "0.0",
             "quantity": 1,
-            "price": null
+            "type": "shipping",
+            "var": {},
+            "api_type": "as_item",
+            "code": "H10025"
         }
     ],
     "upgrades": [],

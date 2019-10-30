@@ -45,6 +45,9 @@ title                  | String          | כן | כותרת המוצר | `טל�
 store_category_title   | String          | כן | הקטגוריה שאליה המוצר שייך | `טלפונים`
 price                  | Numeric         | כן | מחיר המוצר | `55.50`, `999`
 origin_price           | Numeric         | כן | מחיר מקורי (לפני מבצע) | `1499`, `1999.99`
+cost                   | Numeric         | כן | עלות | `150`, `2,000`
+related_item_price     | Numeric         | כן | מחיר כמוצר נלווה | `58.50`, `1000`
+restore_price          | Numeric         | כן | מחיר ספק מומלץ | `220`, `15`
 code                   | String          | כן | מק"ט המוצר | `SKU#123`, `49841687468`
 second_code            | String          | כן | מקט משני (לשימוש פנימי) | `6418351816`
 desc                   | String          | כן | תיאור קצר על המוצר | `טלפון מתקדם מיצרן בינלאומי, מספר אחד בתחום הטלפונים`
@@ -65,6 +68,36 @@ delivery_time          | Integer         | כן | מספר ימי אפסקה | `
 discount_group_id      | Integer         | כן | מספר קבוצת ההנחה | 7`
 discount_group_title   | String          | כן | שם ההנחה | מבצע 3 ב100`
 default_shipping       | Boolean         | כן | הגדר משלוחי ברירת מחדל | `true`
+color_group            | String          | כן | קבוצת צבע | `נעל נייק`
+note                   | String          | כן | הערה  | `מגיע בקופסה`
+features               | String          | כן | מאפיינים | `מגיע ב2 חלקים`
+personal_sell_min_price| String          | כן | מחיר מינימום של מכירה אישית | `20 `
+personal_sell_win_price| String          | כן | מחיר זכייה של מכירה אישית | `20 `
+personal_sell          | Boolean         | כן |  מכירה אישית | `true / false `
+content                | String          | כן | מידע נוסף | `מגיע בשלל צבעים`
+only_contact           | Boolean         | כן | סוג מכירה | `true / false`
+offer_code             | String          | כן | קוד גישה למוצר | `1234`
+prev_url               | String          | כן | prev_url | `www.example.co.il`
+video                  | String          | כן | וידאו יוטיוב (קוד ללא ה HTML) | `WDA4E85Qqwgt84`
+css_class              | String          | כן | css_class | `special`
+head_html              | String          | כן | head_html liquid | `<head></head>`
+foot_html              | String          | כן | foot_html liquid | `<body></body>`
+visit_link             | String          | כן | לינק חיצוני | `www.eee.com`
+data_record_var        | Object          | כן | עריכת שדות נוספים | `{box_quantity : 1}`
+max_payment            | Numeric         | כן | מקסימום כמות תשלומים | `5`
+free_payment           | Numeric         | כן | תשלומים ללא ריבית | `3`
+promotions             | String          | כן | קידום מכירה | `חובה בכל בית`
+kit                    | String          | כן | הערכה כוללת | `מטען + כבל`
+seo_description        | String          | כן | גוגל - description | `מוצר מטורף`
+seo_title              | String          | כן | גוגל - title | `מוצר השנה`
+seo_keywords           | String          | כן | גוגל - keywords | `חזק אמין`
+slug                   | String          | כן | גוגל - slug | `item/454825`
+discount_prices        | Numeric         | כן | מחיר מועדון לקוחות | `6`
+coupon_group_name      | String          | כן | קבוצת קופון מספר | `1+1`
+discount_group_name    | String          | כן | קבוצת קופון מספר | `מחיר מועדון לקוחות`
+store_layout_title     | Numeric         | כן | מוצרים בחבילה | `6`
+zap_product_type       | String          | כן | סוג מוצר | `מוצר חדש`
+store_layout_title     | String          | כן | טמפלט | `layout_item_responsive`
 shipping_option_ids    | Array           | כן | הגדר משלוחים לפי מספר מזהה ייחודי של המערכת, מספר מזהה זה אפשר לקבל במערכת קונימבו |  ["1","2"]
 
 

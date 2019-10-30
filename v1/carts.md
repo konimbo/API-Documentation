@@ -29,6 +29,7 @@
 id | Integer | לא | מספר מזהה העגלה
 items | Object | לא |  המוצרים בעגלה
 upgrades | Object | לא |  השדרוגים של העגלה
+options | Object | לא | שדרוכים ללא מחיר (צבע, טקסט)
 shipping | Object | לא |  פרטי משלוח
 payments | Object | לא |  פרטי תשלומים
 total_price | Integer | לא |  סהכ מחיר העגלה

@@ -48,24 +48,27 @@ origin_price           | Numeric         | כן | מחיר מקורי (לפני 
 cost                   | Numeric         | כן | עלות | `150`, `2,000`
 related_item_price     | Numeric         | כן | מחיר כמוצר נלווה | `58.50`, `1000`
 restore_price          | Numeric         | כן | מחיר ספק מומלץ | `220`, `15`
+eilat_price            | Numeric         | כן | מחיר אילת  | `15.6`, `50.8`
+quantity_step          | Numeric         | כן | קפיצות כמות בק'ג  | `15.6`, `50.8`
 code                   | String          | כן | מק"ט המוצר | `SKU#123`, `49841687468`
 second_code            | String          | כן | מקט משני (לשימוש פנימי) | `6418351816`
 desc                   | String          | כן | תיאור קצר על המוצר | `טלפון מתקדם מיצרן בינלאומי, מספר אחד בתחום הטלפונים`
-visible                | Boolean         | כן | האם המוצר מופיע בחנות או מוסתר | `true`, `false`
+store_visable          | Boolean         | כן | האם המוצר מופיע בחנות או מוסתר | `true`, `false`
 model_title            | String          | כן | שם הספק | `MyProvider`
 brand                  | String          | כן | שם היצרן | `Manufacturer`, `יצרן`
 created_at             | Time (ISO-8601) | לא | זמן יצירת המוצר | `2016-01-01T09:00:00Z`
+destroy_at             | Time (ISO-8601) | לא | זמן מחיקת המוצר | `2016-01-01T09:00:00Z`
 updated_at             | Time (ISO-8601) | לא | זמן העדכון האחרון של המוצר | `2017-01-01T09:00:00Z`
 position               | Integer         | כן | מיקום המוצר | `123`
 quantity               | Integer         | כן | מלאי פשוט | `10`
 warranty               | String          | כן | אחריות | `5 שנים`
-matching_models        | String          | כן | דגמים מתאימים | מדפסת מדגם`
-spec_text              | String          | כן | מפרט בטקסט פתוח | גודל 10 סנטימטר`
+matching_models        | String          | כן | דגמים מתאימים | `מדפסת מדגם`
+spec_text              | String          | כן | מפרט בטקסט פתוח | `גודל 10 סנטימטר`
 is_dad                 | Boolean         | כן | הגדר כמוצר אבא | `true`
 dad_id                 | Integer         | כן | יש להזין את מספר המערכת של המוצר (ID) של המוצר אבא | `1203547`
 zap_visable            | Boolean         | כן | האם להציג לזאפ את המוצר באתר המראה | `true`
 delivery_time          | Integer         | כן | מספר ימי אפסקה | `7`
-discount_group_id      | Integer         | כן | מספר קבוצת ההנחה | 7`
+discount_group_id      | Integer         |  כן | מספר קבוצת ההנחה |`7`
 discount_group_title   | String          | כן | שם ההנחה | מבצע 3 ב100`
 default_shipping       | Boolean         | כן | הגדר משלוחי ברירת מחדל | `true`
 color_group            | String          | כן | קבוצת צבע | `נעל נייק`
@@ -97,6 +100,8 @@ coupon_group_name      | String          | כן | קבוצת קופון מספר
 discount_group_name    | String          | כן | קבוצת קופון מספר | `מחיר מועדון לקוחות`
 store_layout_title     | Numeric         | כן | מוצרים בחבילה | `6`
 zap_product_type       | String          | כן | סוג מוצר | `מוצר חדש`
+store_category_group_title | String          |  לא | שם קבוצה של קטגוריה | `מכשירי חשמל`
+warranty               | String          | כן | אחריות | `5 שנים`
 store_layout_title     | String          | כן | טמפלט | `layout_item_responsive`
 shipping_option_ids    | Array           | כן | הגדר משלוחים לפי מספר מזהה ייחודי של המערכת, מספר מזהה זה אפשר לקבל במערכת קונימבו |  ["1","2"]
 

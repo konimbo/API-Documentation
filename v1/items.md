@@ -186,7 +186,7 @@ image_title | String | כן | שם אייקון(ייחודי)
 title | String | לא | כותרת אייקון
 url | String | לא | הפנייה לאייקון
 visible | String | לא | הצגה בדף מוצר
-index-visable | String | לא | הצגה בדף קטגוריה   true 
+index-visible | String | לא | הצגה בדף קטגוריה    
 remove | String | לא | כדי למחוק שיוך של כל האייקונים נשלח שדה זה עם הערך  "all" 
 
 דוגמאות:

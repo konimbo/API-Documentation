@@ -387,7 +387,7 @@ group_value_title | String | כן | שם ערך הקבוצה
 group_position | String | כן | מיקום הקבוצה
 group_value_position | Integer | כן | מיקום ערך הקבוצה
 broad | Boolan | לא | במידה ורוצים ליצור סינון רוחבי יש לשלוח את הערך   true 
-remove_from_item | Boolan | לא | כדי למחוק שיוך של סינון למוצר יש לשלוח שדה זה עם הערך true 
+remove_from_item | String | לא | כדי להסיר את כל הסינונים הרוחביים למוצר, all-category כדי להסיר את כל סינוני הקטגוריה למוצר all-broad 
 
 דוגמאות:
 
@@ -429,7 +429,7 @@ remove_from_item | Boolan | לא | כדי למחוק שיוך של סינון ל
             "id": 78965421,
             "group_title": "צבע",
             "group_value_title": "ירוק",
-            "remove_from_item": "true"
+            "remove_from_item": "all-category"
         }
     ]
   }

@@ -53,7 +53,8 @@ quantity_step          | Numeric         | כן | קפיצות כמות בק'ג 
 code                   | String          | כן | מק"ט המוצר | `SKU#123`, `49841687468`
 second_code            | String          | כן | מקט משני (לשימוש פנימי) | `6418351816`
 desc                   | String          | כן | תיאור קצר על המוצר | `טלפון מתקדם מיצרן בינלאומי, מספר אחד בתחום הטלפונים`
-visible                | Boolean         | כן | האם המוצר מופיע בחנות או מוסתר | `true`, `false`
+visible                | Boolean         | כן | האם המוצר מופיע בחנות או מוסתר והאם להציג לזאפ את המוצר | `true`, `false`
+store_visable          | Boolean         | כן | האם המוצר מופיע בחנות או מוסתר | `true`, `false`
 model_title            | String          | כן | שם הספק | `MyProvider`
 brand                  | String          | כן | שם היצרן | `Manufacturer`, `יצרן`
 created_at             | Time (ISO-8601) | לא | זמן יצירת המוצר | `2016-01-01T09:00:00Z`

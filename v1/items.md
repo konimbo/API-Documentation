@@ -109,6 +109,58 @@ shipping_option_ids    | Array           | כן | הגדר משלוחים לפי
 
 ### שדות מיוחדים:
 השדות המיוחדים מיוצגים ע"י אובייקטים לפי הפירוט הבא
+#### קטגוריות החנות:
+ניתן לקבל מידע של כל קטגוריות החנות ל ידי גישה ללינק הבא:
+
+https://api.konimbo.co.il/v1/store_categories/?token=XXXXXXXXXXXXXXXXX
+
+דוגמא ל - JSON: 
+```JSON
+[
+{
+"id": 106545,
+"title_en": null,
+"title_he": "מברגות",
+"position": 9999,
+"created_at": "2018-05-17T12:22:32.000Z",
+"updated_at": "2018-12-31T08:18:16.000Z",
+"seo_description": "",
+"seo_keywords": "",
+"seo_title": "",
+"image_url": "",
+"css_class": "",
+"desc": "",
+"parent_id": null,
+"discount_prices": null,
+"slug": "",
+"group_title": null,
+"image_id": null,
+"nav_content": "",
+"tag_id": null
+},
+{
+"id": 128023,
+"title_en": null,
+"title_he": "מוצרי חשמל",
+"position": 9999,
+"created_at": "2018-12-31T08:18:26.000Z",
+"updated_at": "2018-12-31T08:18:26.000Z",
+"seo_description": "",
+"seo_keywords": "",
+"seo_title": "",
+"image_url": "",
+"css_class": "",
+"desc": "",
+"parent_id": null,
+"discount_prices": null,
+"slug": "",
+"group_title": null,
+"image_id": null,
+"nav_content": "",
+"tag_id": null
+}
+]
+```
 
 #### תמונות:
 שדה זה ניתן לעדכון.

@@ -318,3 +318,14 @@ comment | String | לא | הערה על הסטטוס (טקסט חופשי)
 * 404 - No results found
 * 422 - Unprocessable Entity
 * 500 - Internal error
+
+
+##### חיוב הזמנה ממערכת חיצונית
+יש לפנות לקונימבו לפתיחת אפשרות זו
+
+ניתן לבצע חיוב להזמנה בעזרת מערכת חיצונית
+
+POST על מנת לחייב הזמנה יש לבצע קריאת
+```
+POST https://secure.konimbo.co.il/credit_guard_xmls/{{subdomain}}/{{order id}}/debit?token=XXXXXXXXX
+```

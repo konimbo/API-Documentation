@@ -253,14 +253,14 @@ remove | String | לא | כדי למחוק שיוך של כל האייקונים
     "title": "1 + 1",
     "url": "/",
     "visible": "1",
-    "index-visable": "0"
+    "index-visible": "0"
 },
 {
     "image_title": "חדש",
     "title": "חדש",
     "url": "/www.www.com",
     "visible": "1",
-    "index-visable": "1"
+    "index-visible": "1"
 }]
 ```
 * מחיקת כל האייקונים הקודמים של המוצר
@@ -276,7 +276,7 @@ remove | String | לא | כדי למחוק שיוך של כל האייקונים
         "title": "1 + 1",
         "url": "/",
         "visible": "0",
-        "index-visable": "0",
+        "index-visible": "0",
         "remove": "all"
     }]
   }

@@ -117,48 +117,48 @@ https://api.konimbo.co.il/v1/store_categories/?token=XXXXXXXXXXXXXXXXX
 דוגמא ל - JSON: 
 ```JSON
 [
-{
-"id": 106545,
-"title_en": null,
-"title_he": "מברגות",
-"position": 9999,
-"created_at": "2018-05-17T12:22:32.000Z",
-"updated_at": "2018-12-31T08:18:16.000Z",
-"seo_description": "",
-"seo_keywords": "",
-"seo_title": "",
-"image_url": "",
-"css_class": "",
-"desc": "",
-"parent_id": null,
-"discount_prices": null,
-"slug": "",
-"group_title": null,
-"image_id": null,
-"nav_content": "",
-"tag_id": null
-},
-{
-"id": 128023,
-"title_en": null,
-"title_he": "מוצרי חשמל",
-"position": 9999,
-"created_at": "2018-12-31T08:18:26.000Z",
-"updated_at": "2018-12-31T08:18:26.000Z",
-"seo_description": "",
-"seo_keywords": "",
-"seo_title": "",
-"image_url": "",
-"css_class": "",
-"desc": "",
-"parent_id": null,
-"discount_prices": null,
-"slug": "",
-"group_title": null,
-"image_id": null,
-"nav_content": "",
-"tag_id": null
-}
+  {
+    "id": 106545,
+    "title_en": null,
+    "title_he": "מברגות",
+    "position": 9999,
+    "created_at": "2018-05-17T12:22:32.000Z",
+    "updated_at": "2018-12-31T08:18:16.000Z",
+    "seo_description": "",
+    "seo_keywords": "",
+    "seo_title": "",
+    "image_url": "",
+    "css_class": "",
+    "desc": "",
+    "parent_id": null,
+    "discount_prices": null,
+    "slug": "",
+    "group_title": null,
+    "image_id": null,
+    "nav_content": "",
+    "tag_id": null
+  },
+  {
+    "id": 128023,
+    "title_en": null,
+    "title_he": "מוצרי חשמל",
+    "position": 9999,
+    "created_at": "2018-12-31T08:18:26.000Z",
+    "updated_at": "2018-12-31T08:18:26.000Z",
+    "seo_description": "",
+    "seo_keywords": "",
+    "seo_title": "",
+    "image_url": "",
+    "css_class": "",
+    "desc": "",
+    "parent_id": null,
+    "discount_prices": null,
+    "slug": "",
+    "group_title": null,
+    "image_id": null,
+    "nav_content": "",
+    "tag_id": null
+  }
 ]
 ```
 
@@ -301,15 +301,15 @@ position | String | לא | מיקום המוצר
 
 ```JSON
 "related_items": [{
-			"friend_item_id": "1358140",
-			"position": "1"
-		},{
-			"friend_item_code": "18141",
-			"position": "2"
-		},{
-			"friend_item_code": "58141",
-			"position": "2"
-		}]
+    "friend_item_id": "1358140",
+    "position": "1"
+  },{
+    "friend_item_code": "18141",
+    "position": "2"
+  },{
+    "friend_item_code": "58141",
+    "position": "2"
+}]
 ```
 
 * עריכת שורה קיימת
@@ -318,9 +318,9 @@ position | String | לא | מיקום המוצר
 
 ```JSON
 "related_items": [{
-			"friend_item_id": "1358140",
-			"position": "3"
-		}]
+  "friend_item_id": "1358140",
+  "position": "3"
+}]
 ```
 
 * מחיקת מוצר נלווה קיים
@@ -332,10 +332,10 @@ position | String | לא | מיקום המוצר
 
 ```JSON
 "related_items": [{
-			"friend_item_id": null,
-			"position": null,
-            "delete": "true"
-		}]
+  "friend_item_id": null,
+  "position": null,
+        "delete": "true"
+}]
 ```
 
 #### מפרט טכני מובנה:
@@ -518,30 +518,30 @@ remove_from_item | Boolan | לא | כדי למחוק שיוך של סינון ל
 יצירת תגים למוצר (מחיקה של התגים הקיימים)
 ```JSON
 "related_tags": [
-			{"title": "miritag"}, {"title": "israeltag"}
-		]
+  {"title": "miritag"}, {"title": "israeltag"}
+]
 ```
 הסרת שיוך קיים בין מוצר לתג
 ```JSON
 "related_tags": [
-			{"title": "abc", "remove_from_item": "true"},
-      			{"title": "def", "remove_from_item": "true"}
-		]
+  {"title": "abc", "remove_from_item": "true"},
+  {"title": "def", "remove_from_item": "true"}
+]
 ```		
 
 הוספת תג בלבד (ללא הסרה של שאר התגים)
 ```JSON
 "related_tags": [
-			{"title": "abc", "add_to_item": "true"},
-      			{"title": "def", "add_to_item": "true"}
-		]
+  {"title": "abc", "add_to_item": "true"},
+  {"title": "def", "add_to_item": "true"}
+]
 ```		
 
 מחיקת כל תגים עבור מוצר מסויים
 ```JSON
 "related_tags": [
-			{"remove_from_item": "true"}
-		]
+  {"remove_from_item": "true"}
+]
 ```
 
 #### קטגוריה משנית:
@@ -566,8 +566,8 @@ title_he | String | כן | שם הקטגוריה
 
 ```JSON
 "secondary_category_titles": [
-			{"title_he": "itamarbla"}, {"title_he": "ziv_is_in_the_"}
-		]
+    {"title_he": "itamarbla"}, {"title_he": "ziv_is_in_the_"}
+]
 ```
 * עריכת שיוך קיים בין מוצר לקטגוריה משנית
 
@@ -581,8 +581,8 @@ title_he | String | כן | שם הקטגוריה
 * מחיקת כל הקטגוריות המשניות עבור מוצר מסויים
 ```JSON
 "secondary_category_titles": [
-			{"remove_from_item": "true"}
-		]
+    {"remove_from_item": "true"}
+]
 ```
 
 
@@ -590,13 +590,30 @@ title_he | String | כן | שם הקטגוריה
 שדה זה ניתן לעדכון.
 
 field_XXX - XXX מייצג את הid של מועדון הלקוחות
-```
+
+```JSON
 "discount_prices": {
   "field_1211": "60.0",
   "field_1212": "65",
   "field_1213": "69.99"
 }
 ```
+
+####  מחיר מוצר עבור רובוט זאפ:
+
+שם השדה | סכמה | חובה | הסבר
+:---|:---|---:|----:
+url         | String | לא | לינק להשוואת מחירים בזאפ
+price_limit | String | לא |  מחיר מינימום לרובוט זאפ
+
+
+```JSON
+"zap_item": {
+    "url": "https://www.zap.co.il/model.aspx?modelid=1207032",
+    "price_limit": "123"
+}
+```
+
 #### מלאי פשוט
 מלאי פשוט הוא כאשר לכל מוצר יש אפשרות אחת בלבד, כלומר אם למקט יש מספר צבעים ולכל צבע יש מקט ומלאי משלו יש לעבוד עם מלאי מורכב
 דוגמא:

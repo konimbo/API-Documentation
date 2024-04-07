@@ -605,12 +605,25 @@ field_XXX - XXX מייצג את הid של מועדון הלקוחות
 :---|:---|---:|----:
 url         | String | לא | לינק להשוואת מחירים בזאפ
 price_limit | String | לא |  מחיר מינימום לרובוט זאפ
-
+incr_limit | String | לא | שינוי מחיר מקסימלי בפעם אחת בשח (קפיצות 5-9000)
+price_dir | String | לא |  אסטרטגיית תמחור - (יקר או זול)
+price_diff | String | לא |   כחלק מהבחירה של שדה (בחירה בין 0-200)
+store_position | String | לא |  בחירת מיקום המחיר של מקום ראשון/שני/ שלישי ברובוט
+active_manual | String | לא |  סריקה ידנית (true / false)
+active_auto | String | לא |  סריקה אוטומטית (true / false)
+user_price | String | לא |  שנה למחיר זה בסריקה הבאה - אם יש מחיר יזום שצריך לשנות אליו את המחיר
 
 ```JSON
 "zap_item": {
     "url": "https://www.zap.co.il/model.aspx?modelid=1207032",
-    "price_limit": "123"
+    "price_limit": "123",
+    "incr_limit": "10",
+    "price_dir": "זול",
+    "price_diff": "200",
+    "store_position": "ראשון",
+    "active_manual": "true",
+    "active_auto": "true",
+    "user_price": "100",
 }
 ```
 
